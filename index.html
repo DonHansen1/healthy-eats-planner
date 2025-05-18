@@ -63,21 +63,15 @@
            background: linear-gradient(to bottom, #1d4ed8, #1e40af);
            color: white;
        }
-       .day-btn:last-child {
-           margin-right: 0;
-       }
+       .day-btn:last-child { margin-right: 0; }
        .meal-btn {
            flex: 1;
            margin-right: 4px;
            background: linear-gradient(to bottom, #15803d, #14532d);
            color: white;
        }
-       .meal-btn:last-child {
-           margin-right: 0;
-       }
-       .day-btn:hover, .meal-btn:hover {
-           transform: translateY(-2px);
-       }
+       .meal-btn:last-child { margin-right: 0; }
+       .day-btn:hover, .meal-btn:hover { transform: translateY(-2px); }
        .selected-day {
            background: linear-gradient(to bottom, #93c5fd, #60a5fa);
            transform: translateY(-2px);
@@ -105,9 +99,7 @@
            margin: 4px;
            text-align: center;
        }
-       .rating-btn:hover {
-           transform: translateY(-2px);
-       }
+       .rating-btn:hover { transform: translateY(-2px); }
        .rating-options {
            position: absolute;
            background-color: #f3f4f6;
@@ -127,9 +119,7 @@
            background-color: #e5e7eb;
            cursor: pointer;
        }
-       .rating-btn.open .rating-options {
-           display: block;
-       }
+       .rating-btn.open .rating-options { display: block; }
        #day-buttons {
            display: flex;
            width: 100%;
@@ -165,9 +155,7 @@
            display: inline-block;
            margin: 4px;
        }
-       #toggle-meal-info:hover {
-           background: #064e3b;
-       }
+       #toggle-meal-info:hover { background: #064e3b; }
        #toggle-plan-info {
            padding: 12px;
            border-radius: 8px;
@@ -183,9 +171,7 @@
            display: inline-block;
            margin: 4px;
        }
-       #toggle-plan-info:hover {
-           background: #14532d;
-       }
+       #toggle-plan-info:hover { background: #14532d; }
        .price, .nutrition { display: none; }
        #notes {
            width: 100%;
@@ -215,10 +201,9 @@
            display: none;
        }
        @media (min-width: 768px) {
-           #recipe-container, #plan-info {
-               width: 50%;
-           }
+           #recipe-container, #plan-info { width: 50%; }
        }
+       .grayed-out { opacity: 0.5; }
    </style>
 </head>
 <body class="bg-gray-200 p-4">
@@ -244,6 +229,17 @@
        </div>
    </div>
    <div id="plan-info">
+       <h1 class="text-2xl font-bold text-center mb-4">Statistics</h1>
+       <div class="mb-4 flex justify-center space-x-4">
+           <label class="flex items-center">
+               <input type="checkbox" id="include-snacks" checked class="mr-2">
+               Include 1 Snack Per Day
+           </label>
+           <label class="flex items-center">
+               <input type="checkbox" id="include-desserts" checked class="mr-2">
+               Include 1 Dessert Per Day
+           </label>
+       </div>
        <h2 class="text-xl font-bold mb-4 text-center">Average Costs</h2>
        <table class="w-full border-collapse border border-gray-300 text-lg">
            <thead>
@@ -256,60 +252,34 @@
                </tr>
            </thead>
            <tbody id="cost-table-body">
-               <tr>
-                   <td class="border border-gray-300 p-2 font-bold">Breakfasts</td>
-                   <td class="border border-gray-300 p-2 text-center">$1.03</td>
-                   <td class="border border-gray-300 p-2 text-center">$7.21</td>
-                   <td class="border border-gray-300 p-2 text-center">$31.33</td>
-                   <td class="border border-gray-300 p-2 text-center">$375.95</td>
-               </tr>
-               <tr>
-                   <td class="border border-gray-300 p-2 font-bold">Lunches</td>
-                   <td class="border border-gray-300 p-2 text-center">$1.61</td>
-                   <td class="border border-gray-300 p-2 text-center">$11.27</td>
-                   <td class="border border-gray-300 p-2 text-center">$48.98</td>
-                   <td class="border border-gray-300 p-2 text-center">$587.65</td>
-               </tr>
-               <tr>
-                   <td class="border border-gray-300 p-2 font-bold">Dinners</td>
-                   <td class="border border-gray-300 p-2 text-center">$2.12</td>
-                   <td class="border border-gray-300 p-2 text-center">$14.84</td>
-                   <td class="border border-gray-300 p-2 text-center">$64.49</td>
-                   <td class="border border-gray-300 p-2 text-center">$773.80</td>
-               </tr>
-               <tr>
-                   <td class="border border-gray-300 p-2 font-bold">Snacks</td>
-                   <td class="border border-gray-300 p-2 text-center">$1.02</td>
-                   <td class="border border-gray-300 p-2 text-center">$7.14</td>
-                   <td class="border border-gray-300 p-2 text-center">$31.03</td>
-                   <td class="border border-gray-300 p-2 text-center">$372.30</td>
-               </tr>
-               <tr>
-                   <td class="border border-gray-300 p-2 font-bold">Desserts</td>
-                   <td class="border border-gray-300 p-2 text-center">$1.16</td>
-                   <td class="border border-gray-300 p-2 text-center">$8.12</td>
-                   <td class="border border-gray-300 p-2 text-center">$35.29</td>
-                   <td class="border border-gray-300 p-2 text-center">$423.40</td>
-               </tr>
-               <tr>
-                   <td class="border border-gray-300 p-2 font-bold">Total</td>
-                   <td class="border border-gray-300 p-2 text-center" id="total-day">$6.94</td>
-                   <td class="border border-gray-300 p-2 text-center" id="total-week">$48.58</td>
-                   <td class="border border-gray-300 p-2 text-center" id="total-month">$211.12</td>
-                   <td class="border border-gray-300 p-2 text-center" id="total-year">$2533.10</td>
-               </tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Breakfasts</td><td class="border border-gray-300 p-2 text-center">$1.03</td><td class="border border-gray-300 p-2 text-center">$7.21</td><td class="border border-gray-300 p-2 text-center">$31.33</td><td class="border border-gray-300 p-2 text-center">$375.95</td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Lunches</td><td class="border border-gray-300 p-2 text-center">$1.61</td><td class="border border-gray-300 p-2 text-center">$11.27</td><td class="border border-gray-300 p-2 text-center">$48.98</td><td class="border border-gray-300 p-2 text-center">$587.65</td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Dinners</td><td class="border border-gray-300 p-2 text-center">$2.12</td><td class="border border-gray-300 p-2 text-center">$14.84</td><td class="border border-gray-300 p-2 text-center">$64.49</td><td class="border border-gray-300 p-2 text-center">$773.80</td></tr>
+               <tr id="snacks-row"><td class="border border-gray-300 p-2 font-bold">Snacks</td><td class="border border-gray-300 p-2 text-center">$1.02</td><td class="border border-gray-300 p-2 text-center">$7.14</td><td class="border border-gray-300 p-2 text-center">$31.03</td><td class="border border-gray-300 p-2 text-center">$372.30</td></tr>
+               <tr id="desserts-row"><td class="border border-gray-300 p-2 font-bold">Desserts</td><td class="border border-gray-300 p-2 text-center">$1.16</td><td class="border border-gray-300 p-2 text-center">$8.12</td><td class="border border-gray-300 p-2 text-center">$35.29</td><td class="border border-gray-300 p-2 text-center">$423.40</td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Total</td><td class="border border-gray-300 p-2 text-center" id="total-day">$6.94</td><td class="border border-gray-300 p-2 text-center" id="total-week">$48.58</td><td class="border border-gray-300 p-2 text-center" id="total-month">$211.12</td><td class="border border-gray-300 p-2 text-center" id="total-year">$2533.10</td></tr>
            </tbody>
        </table>
-       <div class="mt-4 flex justify-center space-x-4">
-           <label class="flex items-center">
-               <input type="checkbox" id="include-snacks" checked class="mr-2">
-               Include Snacks
-           </label>
-           <label class="flex items-center">
-               <input type="checkbox" id="include-desserts" checked class="mr-2">
-               Include Desserts
-           </label>
-       </div>
+       <h2 class="text-xl font-bold mt-6 mb-4 text-center">Average Nutrition</h2>
+       <table class="w-full border-collapse border border-gray-300 text-lg">
+           <thead>
+               <tr class="bg-gray-200">
+                   <th class="border border-gray-300 p-2"></th>
+                   <th class="border border-gray-300 p-2">Day</th>
+                   <th class="border border-gray-300 p-2">Week</th>
+                   <th class="border border-gray-300 p-2">Month</th>
+                   <th class="border border-gray-300 p-2">Year</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr><td class="border border-gray-300 p-2 font-bold">Calories (kcal)</td><td class="border border-gray-300 p-2 text-center" id="calories-day">1620</td><td class="border border-gray-300 p-2 text-center" id="calories-week">11340</td><td class="border border-gray-300 p-2 text-center" id="calories-month">49280</td><td class="border border-gray-300 p-2 text-center" id="calories-year">590900</td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Protein (g)</td><td class="border border-gray-300 p-2 text-center" id="protein-day">83</td><td class="border border-gray-300 p-2 text-center" id="protein-week">581</td><td class="border border-gray-300 p-2 text-center" id="protein-month">2525</td><td class="border border-gray-300 p-2 text-center" id="protein-year">30295</td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Fiber (g)</td><td class="border border-gray-300 p-2 text-center" id="fiber-day">22</td><td class="border border-gray-300 p-2 text-center" id="fiber-week">154</td><td class="border border-gray-300 p-2 text-center" id="fiber-month">669</td><td class="border border-gray-300 p-2 text-center" id="fiber-year">8030</td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Sodium (mg)</td><td class="border border-gray-300 p-2 text-center" id="sodium-day">1400</td><td class="border border-gray-300 p-2 text-center" id="sodium-week">9800</td><td class="border border-gray-300 p-2 text-center" id="sodium-month">42588</td><td class="border border-gray-300 p-2 text-center" id="sodium-year">511000</td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Fat (g)</td><td class="border border-gray-300 p-2 text-center" id="fat-day">60</td><td class="border border-gray-300 p-2 text-center" id="fat-week">420</td><td class="border border-gray-300 p-2 text-center" id="fat-month">1825</td><td class="border border-gray-300 p-2 text-center" id="fat-year">21900</td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Carbohydrates (g)</td><td class="border border-gray-300 p-2 text-center" id="carbs-day">180</td><td class="border border-gray-300 p-2 text-center" id="carbs-week">1260</td><td class="border border-gray-300 p-2 text-center" id="carbs-month">5476</td><td class="border border-gray-300 p-2 text-center" id="carbs-year">65700</td></tr>
+           </tbody>
+       </table>
    </div>
    <div id="recipe" class="hidden">
        <div id="recipe-container">
@@ -373,729 +343,24 @@
        </div>
    </div>
    <script>
-       const menu = {
-           Monday: {
-               Breakfast: {
-                   number: "001",
-                   title: "Spinach-Egg Scramble with Ezekiel Toast",
-                   ingredients: [
-                       { name: "2 eggs", cost: "$0.33" },
-                       { name: "1/2 cup frozen spinach", cost: "$0.13" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 Dorot garlic cube", cost: "$0.15" },
-                       { name: "1 slice Ezekiel bread", cost: "$0.28" },
-                       { name: "1 tsp lemon juice", cost: "$0.03" },
-                       { name: "1/4 tsp turmeric", cost: "$0.02" }
-                   ],
-                   prep: "Microwave spinach 1 min, drain. Heat oil, garlic cube; scramble eggs with spinach, turmeric. Toast bread, drizzle lemon juice. (5 min)",
-                   nutrition: "~350 kcal, 18 g protein, 5 g fiber, 350 mg sodium",
-                   cost: "$1.08",
-                   snack: {
-                       number: "092",
-                       title: "Yogurt-Blueberry Flax Cup",
-                       ingredients: [
-                           { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                           { name: "1/4 cup frozen blueberries", cost: "$0.40" },
-                           { name: "1 tsp ground flax seed", cost: "$0.04" },
-                           { name: "1 tsp maple syrup", cost: "$0.21" }
-                       ],
-                       prep: "Mix all, let sit 5 min. (2 min)",
-                       nutrition: "~180 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
-                       cost: "$0.93"
-                   }
-               },
-               Lunch: {
-                   number: "002",
-                   title: "Tuna-Kale Salad",
-                   ingredients: [
-                       { name: "1 can tuna", cost: "$0.91" },
-                       { name: "1/2 cup frozen kale", cost: "$0.16" },
-                       { name: "1 tsp lemon juice", cost: "$0.03" },
-                       { name: "1/4 tsp lemon pepper salt", cost: "$0.04" },
-                       { name: "1 tsp olive oil", cost: "$0.14" }
-                   ],
-                   prep: "Thaw kale (microwave 1 min or fridge overnight), mix with drained tuna, lemon juice, seasoning, olive oil. (3 min)",
-                   nutrition: "~320 kcal, 24 g protein, 5 g fiber, 400 mg sodium",
-                   cost: "$1.28",
-                   snack: {
-                       number: "093",
-                       title: "Cottage Cheese-Prune Mix",
-                       ingredients: [
-                           { name: "1/4 cup cottage cheese", cost: "$0.35" },
-                           { name: "2 prunes", cost: "$0.34" },
-                           { name: "1 tsp honey", cost: "$0.12" },
-                           { name: "1/4 tsp cinnamon", cost: "$0.02" }
-                       ],
-                       prep: "Chop prunes, mix with cottage cheese, honey, cinnamon. (3 min)",
-                       nutrition: "~200 kcal, 8 g protein, 3 g fiber, 150 mg sodium",
-                       cost: "$0.83"
-                   }
-               },
-               Dinner: {
-                   number: "003",
-                   title: "Chicken-Zucchini Quinoa Bowl",
-                   ingredients: [
-                       { name: "4 oz frozen chicken breast", cost: "$1.07" },
-                       { name: "1/2 cup cooked quinoa", cost: "$0.19" },
-                       { name: "1/2 cup frozen zucchini blend", cost: "$0.24" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp teriyaki sauce", cost: "$0.07" },
-                       { name: "1/4 tsp cumin", cost: "$0.02" }
-                   ],
-                   prep: "Thaw/cook chicken (bake 375°F, 20 min), slice. Microwave quinoa, zucchini 2 min. Toss with oil, teriyaki, cumin. (25 min)",
-                   nutrition: "~500 kcal, 25 g protein, 5 g fiber, 600 mg sodium",
-                   cost: "$1.73",
-                   snack: {
-                       number: "094",
-                       title: "Peanut Butter-Apple Dip",
-                       ingredients: [
-                           { name: "1/2 Granny Smith apple", cost: "$0.33" },
-                           { name: "1 tbsp peanut butter", cost: "$0.14" },
-                           { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                           { name: "1/4 tsp vanilla extract", cost: "$0.35" }
-                       ],
-                       prep: "Slice apple, mix yogurt, peanut butter, vanilla. Dip and eat. (3 min)",
-                       nutrition: "~220 kcal, 8 g protein, 3 g fiber, 50 mg sodium",
-                       cost: "$1.10"
-                   }
-               },
-               Dessert: {
-                   number: "155",
-                   title: "Apple-Peanut Butter Yogurt Dip",
-                   ingredients: [
-                       { name: "1/2 Granny Smith apple", cost: "$0.33" },
-                       { name: "1 tbsp peanut butter", cost: "$0.14" },
-                       { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                       { name: "1 tsp honey", cost: "$0.12" },
-                       { name: "1/4 tsp cinnamon", cost: "$0.02" }
-                   ],
-                   prep: "Slice apple, mix yogurt, peanut butter, honey, cinnamon. Dip and eat. (3 min)",
-                   nutrition: "~200 kcal, 8 g protein, 3 g fiber, 50 mg sodium",
-                   cost: "$0.89"
-               }
-           },
-           Tuesday: {
-               Breakfast: {
-                   number: "004",
-                   title: "Egg-Tomato Avocado Scramble",
-                   ingredients: [
-                       { name: "2 eggs", cost: "$0.33" },
-                       { name: "1/4 cup canned diced tomatoes", cost: "$0.07" },
-                       { name: "1 Wholly avocado mini", cost: "$0.91" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1/4 tsp chili powder", cost: "$0.02" }
-                   ],
-                   prep: "Heat oil, scramble eggs with tomatoes, chili powder. Top with avocado. (5 min)",
-                   nutrition: "~380 kcal, 16 g protein, 4 g fiber, 300 mg sodium",
-                   cost: "$1.47",
-                   snack: {
-                       number: "095",
-                       title: "Kefir-Raspberry Chia Cup",
-                       ingredients: [
-                           { name: "1/2 cup kefir", cost: "$0.29" },
-                           { name: "1/4 cup frozen raspberries", cost: "$0.33" },
-                           { name: "1 tbsp chia seeds", cost: "$0.22" },
-                           { name: "1 tsp honey", cost: "$0.12" }
-                       ],
-                       prep: "Mix all, let sit 5 min. (2 min)",
-                       nutrition: "~190 kcal, 6 g protein, 4 g fiber, 60 mg sodium",
-                       cost: "$0.96"
-                   }
-               },
-               Lunch: {
-                   number: "005",
-                   title: "Canned Chicken-Quinoa Veggie Bowl",
-                   ingredients: [
-                       { name: "5.22 oz canned chicken", cost: "$0.93" },
-                       { name: "1/2 cup cooked quinoa", cost: "$0.19" },
-                       { name: "1/2 cup frozen broccoli", cost: "$0.17" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp lemon juice", cost: "$0.03" },
-                       { name: "1/4 tsp cumin", cost: "$0.02" }
-                   ],
-                   prep: "Microwave broccoli 2 min, mix with chicken, quinoa, oil, lemon, cumin. (3 min)",
-                   nutrition: "~450 kcal, 24 g protein, 5 g fiber, 400 mg sodium",
-                   cost: "$1.48",
-                   snack: {
-                       number: "096",
-                       title: "Yogurt-Walnut Pumpkin Mix",
-                       ingredients: [
-                           { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                           { name: "1 tbsp walnuts", cost: "$0.33" },
-                           { name: "1/4 cup canned pumpkin", cost: "$0.12" },
-                           { name: "1/4 tsp pumpkin pie spice", cost: "$0.04" }
-                       ],
-                       prep: "Mix all ingredients. (2 min)",
-                       nutrition: "~190 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
-                       cost: "$0.77"
-                   }
-               },
-               Dinner: {
-                   number: "006",
-                   title: "Salmon-Kale Quinoa Bowl",
-                   ingredients: [
-                       { name: "4 oz frozen salmon", cost: "$1.68" },
-                       { name: "1/2 cup cooked quinoa", cost: "$0.19" },
-                       { name: "1/2 cup frozen kale", cost: "$0.16" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp lemon juice", cost: "$0.03" },
-                       { name: "1/4 tsp cumin", cost: "$0.02" }
-                   ],
-                   prep: "Bake salmon (400°F, 15 min). Microwave quinoa, kale 2 min. Toss with oil, lemon, cumin. (20 min)",
-                   nutrition: "~480 kcal, 26 g protein, 5 g fiber, 350 mg sodium",
-                   cost: "$2.22",
-                   snack: {
-                       number: "097",
-                       title: "Cottage Cheese-Cherry Mix",
-                       ingredients: [
-                           { name: "1/4 cup cottage cheese", cost: "$0.35" },
-                           { name: "1/4 cup frozen cherries", cost: "$0.56" },
-                           { name: "1 tsp maple syrup", cost: "$0.21" },
-                           { name: "1/4 tsp vanilla extract", cost: "$0.35" }
-                       ],
-                       prep: "Thaw cherries (microwave 30 sec), mix with cottage cheese, syrup, vanilla. (3 min)",
-                       nutrition: "~210 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
-                       cost: "$1.47"
-                   }
-               },
-               Dessert: {
-                   number: "156",
-                   title: "Blueberry-Chia Kefir Pudding",
-                   ingredients: [
-                       { name: "1/4 cup frozen blueberries", cost: "$0.40" },
-                       { name: "1 tbsp chia seeds", cost: "$0.22" },
-                       { name: "1/2 cup kefir", cost: "$0.29" },
-                       { name: "1 tsp maple syrup", cost: "$0.21" },
-                       { name: "1/4 tsp vanilla extract", cost: "$0.35" }
-                   ],
-                   prep: "Mix all, let sit 10 min or fridge overnight. (2 min)",
-                   nutrition: "~180 kcal, 6 g protein, 4 g fiber, 60 mg sodium",
-                   cost: "$1.47"
-               }
-           },
-           Wednesday: {
-               Breakfast: {
-                   number: "007",
-                   title: "Enhanced Egg-Pepper Oat Muffin",
-                   ingredients: [
-                       { name: "2 eggs", cost: "$0.33" },
-                       { name: "1/4 cup quick oats", cost: "$0.04" },
-                       { name: "1/4 cup frozen green peppers", cost: "$0.15" },
-                       { name: "1/4 cup frozen spinach", cost: "$0.06" },
-                       { name: "1 tbsp canned diced tomatoes", cost: "$0.02" },
-                       { name: "1 tbsp cottage cheese", cost: "$0.14" },
-                       { name: "1 tsp nutritional yeast", cost: "$0.10" },
-                       { name: "1 tsp ground flax seed", cost: "$0.04" },
-                       { name: "1/4 tsp everything bagel seasoning", cost: "$0.02" },
-                       { name: "1 tsp lemon juice", cost: "$0.03" },
-                       { name: "1/4 tsp chili powder", cost: "$0.02" },
-                       { name: "1 tbsp kefir", cost: "$0.07" },
-                       { name: "1 tsp balsamic vinegar", cost: "$0.07" }
-                   ],
-                   prep: "Mix all, microwave in mug 2–3 min. Top with vinegar. (5 min)",
-                   nutrition: "~360 kcal, 20 g protein, 6 g fiber, 400 mg sodium",
-                   cost: "$1.09",
-                   snack: {
-                       number: "098",
-                       title: "Yogurt-Kiwi Chia Cup",
-                       ingredients: [
-                           { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                           { name: "1 kiwi", cost: "$0.57" },
-                           { name: "1 tbsp chia seeds", cost: "$0.22" },
-                           { name: "1 tsp honey", cost: "$0.12" }
-                       ],
-                       prep: "Dice kiwi, mix with yogurt, chia, honey. Let sit 5 min. (3 min)",
-                       nutrition: "~200 kcal, 7 g protein, 4 g fiber, 40 mg sodium",
-                       cost: "$1.19"
-                   }
-               },
-               Lunch: {
-                   number: "008",
-                   title: "Sardine-Spinach Salad",
-                   ingredients: [
-                       { name: "1 can sardines", cost: "$1.12" },
-                       { name: "1/2 cup frozen spinach", cost: "$0.13" },
-                       { name: "1 tbsp walnuts", cost: "$0.33" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp balsamic vinegar", cost: "$0.07" },
-                       { name: "1/4 tsp black pepper", cost: "$0.02" }
-                   ],
-                   prep: "Thaw spinach (microwave 1 min), mix with drained sardines, walnuts, oil, vinegar, pepper. (3 min)",
-                   nutrition: "~400 kcal, 22 g protein, 4 g fiber, 380 mg sodium",
-                   cost: "$1.81",
-                   snack: {
-                       number: "099",
-                       title: "Cottage Cheese-Apple Dip",
-                       ingredients: [
-                           { name: "1/4 cup cottage cheese", cost: "$0.35" },
-                           { name: "1/2 Granny Smith apple", cost: "$0.33" },
-                           { name: "1 tsp peanut butter", cost: "$0.07" },
-                           { name: "1/4 tsp cinnamon", cost: "$0.02" }
-                       ],
-                       prep: "Slice apple, mix cottage cheese, peanut butter, cinnamon. Dip and eat. (3 min)",
-                       nutrition: "~190 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
-                       cost: "$0.77"
-                   }
-               },
-               Dinner: {
-                   number: "009",
-                   title: "Turkey-Cauliflower Skillet",
-                   ingredients: [
-                       { name: "4 oz ground turkey", cost: "$1.14" },
-                       { name: "1/2 cup frozen riced cauliflower", cost: "$0.27" },
-                       { name: "1/2 cup frozen green beans", cost: "$0.16" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp BBQ sauce", cost: "$0.07" },
-                       { name: "1/4 tsp black pepper", cost: "$0.02" }
-                   ],
-                   prep: "Cook turkey in oil, add veggies, sauce, pepper; cook 5 min. (15 min)",
-                   nutrition: "~420 kcal, 24 g protein, 5 g fiber, 400 mg sodium",
-                   cost: "$1.80",
-                   snack: {
-                       number: "100",
-                       title: "Yogurt-Cherry Flax Mix",
-                       ingredients: [
-                           { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                           { name: "1/4 cup frozen cherries", cost: "$0.56" },
-                           { name: "1 tsp ground flax seed", cost: "$0.04" },
-                           { name: "1 tsp maple syrup", cost: "$0.21" }
-                       ],
-                       prep: "Thaw cherries (microwave 30 sec), mix with yogurt, flax, syrup. (3 min)",
-                       nutrition: "~190 kcal, 7 g protein, 2 g fiber, 40 mg sodium",
-                       cost: "$1.09"
-                   }
-               },
-               Dessert: {
-                   number: "157",
-                   title: "Pumpkin-Walnut Yogurt Parfait",
-                   ingredients: [
-                       { name: "1/4 cup canned pumpkin", cost: "$0.12" },
-                       { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                       { name: "1 tbsp walnuts", cost: "$0.33" },
-                       { name: "1 tsp honey", cost: "$0.12" },
-                       { name: "1/4 tsp pumpkin pie spice", cost: "$0.04" }
-                   ],
-                   prep: "Layer all, mix lightly. (2 min)",
-                   nutrition: "~190 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
-                   cost: "$0.89"
-               }
-           },
-           Thursday: {
-               Breakfast: {
-                   number: "010",
-                   title: "Kefir-Oat Berry Bowl",
-                   ingredients: [
-                       { name: "1/2 cup quick oats", cost: "$0.04" },
-                       { name: "1/2 cup kefir", cost: "$0.29" },
-                       { name: "1/4 cup frozen raspberries", cost: "$0.33" },
-                       { name: "1 tbsp chia seeds", cost: "$0.22" },
-                       { name: "1 tsp maple syrup", cost: "$0.21" },
-                       { name: "1/4 tsp cinnamon", cost: "$0.02" }
-                   ],
-                   prep: "Mix all, let sit 5 min or fridge overnight. (2 min)",
-                   nutrition: "~350 kcal, 12 g protein, 8 g fiber, 100 mg sodium",
-                   cost: "$1.11",
-                   snack: {
-                       number: "101",
-                       title: "Cottage Cheese-Blueberry Mix",
-                       ingredients: [
-                           { name: "1/4 cup cottage cheese", cost: "$0.35" },
-                           { name: "1/4 cup frozen blueberries", cost: "$0.40" },
-                           { name: "1 tsp honey", cost: "$0.12" },
-                           { name: "1/4 tsp vanilla extract", cost: "$0.35" }
-                       ],
-                       prep: "Mix all, let sit 2 min. (2 min)",
-                       nutrition: "~190 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
-                       cost: "$1.22"
-                   }
-               },
-               Lunch: {
-                   number: "011",
-                   title: "Black Bean-Broccoli Quinoa Bowl",
-                   ingredients: [
-                       { name: "1/2 cup canned black beans", cost: "$0.14" },
-                       { name: "1/2 cup cooked quinoa", cost: "$0.19" },
-                       { name: "1/2 cup frozen broccoli", cost: "$0.17" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 Dorot garlic cube", cost: "$0.15" },
-                       { name: "1 tsp cumin", cost: "$0.02" },
-                       { name: "1/4 cup kefir", cost: "$0.15" }
-                   ],
-                   prep: "Microwave beans, quinoa, broccoli, garlic 2 min. Stir in oil, cumin, kefir. (3 min)",
-                   nutrition: "~420 kcal, 16 g protein, 8 g fiber, 200 mg sodium",
-                   cost: "$0.96",
-                   snack: {
-                       number: "102",
-                       title: "Yogurt-Prune Flax Cup",
-                       ingredients: [
-                           { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                           { name: "2 prunes", cost: "$0.34" },
-                           { name: "1 tsp ground flax seed", cost: "$0.04" },
-                           { name: "1 tsp maple syrup", cost: "$0.21" }
-                       ],
-                       prep: "Chop prunes, mix with yogurt, flax, syrup. Let sit 5 min. (3 min)",
-                       nutrition: "~200 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
-                       cost: "$0.87"
-                   }
-               },
-               Dinner: {
-                   number: "012",
-                   title: "Beef-Spinach Stir-Fry",
-                   ingredients: [
-                       { name: "4 oz ground beef", cost: "$1.79" },
-                       { name: "1/2 cup frozen spinach", cost: "$0.13" },
-                       { name: "1/2 cup frozen peppers and onions", cost: "$0.34" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp W Sauce", cost: "$0.17" },
-                       { name: "1/4 tsp chili powder", cost: "$0.02" }
-                   ],
-                   prep: "Cook beef in oil, add veggies, sauce, chili powder; cook 5 min. (15 min)",
-                   nutrition: "~450 kcal, 26 g protein, 4 g fiber, 500 mg sodium",
-                   cost: "$2.59",
-                   snack: {
-                       number: "103",
-                       title: "Cottage Cheese-Kiwi Mix",
-                       ingredients: [
-                           { name: "1/4 cup cottage cheese", cost: "$0.35" },
-                           { name: "1 kiwi", cost: "$0.57" },
-                           { name: "1 tsp honey", cost: "$0.12" },
-                           { name: "1/4 tsp cinnamon", cost: "$0.02" }
-                       ],
-                       prep: "Dice kiwi, mix with cottage cheese, honey, cinnamon. (3 min)",
-                       nutrition: "~190 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
-                       cost: "$1.06"
-                   }
-               },
-               Dessert: {
-                   number: "158",
-                   title: "Prune-Yogurt Chia Cup",
-                   ingredients: [
-                       { name: "2 prunes", cost: "$0.34" },
-                       { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                       { name: "1 tbsp chia seeds", cost: "$0.22" },
-                       { name: "1 tsp honey", cost: "$0.12" },
-                       { name: "1/4 tsp vanilla extract", cost: "$0.35" }
-                   ],
-                   prep: "Chop prunes, mix with yogurt, chia, honey, vanilla. Let sit 5 min. (3 min)",
-                   nutrition: "~200 kcal, 7 g protein, 4 g fiber, 40 mg sodium",
-                   cost: "$1.31"
-               }
-           },
-           Friday: {
-               Breakfast: {
-                   number: "013",
-                   title: "Egg-Spinach Tomato Skillet",
-                   ingredients: [
-                       { name: "1 egg", cost: "$0.17" },
-                       { name: "1/2 cup frozen spinach", cost: "$0.13" },
-                       { name: "1/4 cup canned diced tomatoes", cost: "$0.07" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1/4 tsp turmeric", cost: "$0.02" }
-                   ],
-                   prep: "Heat oil, cook spinach, tomatoes, turmeric; add egg, scramble. (5 min)",
-                   nutrition: "~220 kcal, 10 g protein, 3 g fiber, 200 mg sodium",
-                   cost: "$0.53",
-                   snack: {
-                       number: "104",
-                       title: "Yogurt-Raspberry Walnut Cup",
-                       ingredients: [
-                           { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                           { name: "1/4 cup frozen raspberries", cost: "$0.33" },
-                           { name: "1 tbsp walnuts", cost: "$0.33" },
-                           { name: "1 tsp honey", cost: "$0.12" }
-                       ],
-                       prep: "Mix all, let sit 2 min. (2 min)",
-                       nutrition: "~220 kcal, 8 g protein, 3 g fiber, 40 mg sodium",
-                       cost: "$1.06"
-                   }
-               },
-               Lunch: {
-                   number: "014",
-                   title: "Chicken-Kale Quinoa Salad",
-                   ingredients: [
-                       { name: "5.22 oz canned chicken", cost: "$0.93" },
-                       { name: "1/2 cup cooked quinoa", cost: "$0.19" },
-                       { name: "1/2 cup frozen kale", cost: "$0.16" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp balsamic vinegar", cost: "$0.07" },
-                       { name: "1/4 tsp black pepper", cost: "$0.02" }
-                   ],
-                   prep: "Thaw kale (microwave 1 min), mix with chicken, quinoa, oil, vinegar, pepper. (3 min)",
-                   nutrition: "~430 kcal, 24 g protein, 5 g fiber, 400 mg sodium",
-                   cost: "$1.51",
-                   snack: {
-                       number: "105",
-                       title: "Cottage Cheese-Pumpkin Mix",
-                       ingredients: [
-                           { name: "1/4 cup cottage cheese", cost: "$0.35" },
-                           { name: "1/4 cup canned pumpkin", cost: "$0.12" },
-                           { name: "1 tsp maple syrup", cost: "$0.21" },
-                           { name: "1/4 tsp pumpkin pie spice", cost: "$0.04" }
-                       ],
-                       prep: "Mix all ingredients. (2 min)",
-                       nutrition: "~180 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
-                       cost: "$0.72"
-                   }
-               },
-               Dinner: {
-                   number: "015",
-                   title: "Salmon-Brussels Sprouts Bowl",
-                   ingredients: [
-                       { name: "4 oz frozen salmon", cost: "$1.68" },
-                       { name: "1/2 cup frozen Brussels sprouts", cost: "$0.24" },
-                       { name: "1 tbsp walnuts", cost: "$0.33" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp lemon juice", cost: "$0.03" },
-                       { name: "1/4 tsp black pepper", cost: "$0.02" }
-                   ],
-                   prep: "Bake salmon (400°F, 15 min). Microwave sprouts 2 min. Toss with walnuts, oil, lemon, pepper. (20 min)",
-                   nutrition: "~460 kcal, 26 g protein, 5 g fiber, 350 mg sodium",
-                   cost: "$2.44",
-                   snack: {
-                       number: "106",
-                       title: "Yogurt-Chocolate Chia Cup",
-                       ingredients: [
-                           { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                           { name: "1 square Lindt 85% chocolate", cost: "$0.56" },
-                           { name: "1 tbsp chia seeds", cost: "$0.22" },
-                           { name: "1 tsp honey", cost: "$0.12" }
-                       ],
-                       prep: "Chop chocolate, mix with yogurt, chia, honey. Let sit 5 min. (3 min)",
-                       nutrition: "~230 kcal, 8 g protein, 4 g fiber, 40 mg sodium",
-                       cost: "$1.18"
-                   }
-               },
-               Dessert: {
-                   number: "159",
-                   title: "Kiwi-Yogurt Flax Parfait",
-                   ingredients: [
-                       { name: "1 kiwi", cost: "$0.57" },
-                       { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                       { name: "1 tsp ground flax seed", cost: "$0.04" },
-                       { name: "1 tsp maple syrup", cost: "$0.21" },
-                       { name: "1/4 tsp cinnamon", cost: "$0.02" }
-                   ],
-                   prep: "Dice kiwi, layer with yogurt, flax, syrup, cinnamon. (3 min)",
-                   nutrition: "~180 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
-                   cost: "$1.12"
-               }
-           },
-           Saturday: {
-               Breakfast: {
-                   number: "016",
-                   title: "Oat-Egg Veggie Muffin",
-                   ingredients: [
-                       { name: "2 eggs", cost: "$0.33" },
-                       { name: "1/4 cup quick oats", cost: "$0.04" },
-                       { name: "1/4 cup frozen peas and carrots", cost: "$0.08" },
-                       { name: "1 tbsp Greek yogurt", cost: "$0.07" },
-                       { name: "1 tsp nutritional yeast", cost: "$0.10" },
-                       { name: "1/4 tsp Montreal chicken seasoning", cost: "$0.02" },
-                       { name: "1 tsp lemon juice", cost: "$0.03" }
-                   ],
-                   prep: "Mix all, microwave in mug 2–3 min. (5 min)",
-                   nutrition: "~340 kcal, 18 g protein, 4 g fiber, 300 mg sodium",
-                   cost: "$0.67",
-                   snack: {
-                       number: "107",
-                       title: "Cottage Cheese-Raspberry Mix",
-                       ingredients: [
-                           { name: "1/4 cup cottage cheese", cost: "$0.35" },
-                           { name: "1/4 cup frozen raspberries", cost: "$0.33" },
-                           { name: "1 tsp maple syrup", cost: "$0.21" },
-                           { name: "1/4 tsp vanilla extract", cost: "$0.35" }
-                       ],
-                       prep: "Mix all, let sit 2 min. (2 min)",
-                       nutrition: "~190 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
-                       cost: "$1.24"
-                   }
-               },
-               Lunch: {
-                   number: "017",
-                   title: "Turkey-Black Bean Salad",
-                   ingredients: [
-                       { name: "4 oz ground turkey (pre-cooked)", cost: "$1.14" },
-                       { name: "1/2 cup canned black beans", cost: "$0.14" },
-                       { name: "1/2 cup frozen green peppers", cost: "$0.15" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp spicy brown mustard", cost: "$0.03" },
-                       { name: "1/4 tsp cumin", cost: "$0.02" }
-                   ],
-                   prep: "Thaw peppers (microwave 1 min), mix with turkey, beans, oil, mustard, cumin. (3 min)",
-                   nutrition: "~420 kcal, 25 g protein, 7 g fiber, 400 mg sodium",
-                   cost: "$1.62",
-                   snack: {
-                       number: "108",
-                       title: "Yogurt-Apple Flax Cup",
-                       ingredients: [
-                           { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                           { name: "1/2 Granny Smith apple", cost: "$0.33" },
-                           { name: "1 tsp ground flax seed", cost: "$0.04" },
-                           { name: "1 tsp honey", cost: "$0.12" }
-                       ],
-                       prep: "Dice apple, mix with yogurt, flax, honey. Let sit 5 min. (3 min)",
-                       nutrition: "~190 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
-                       cost: "$0.77"
-                   }
-               },
-               Dinner: {
-                   number: "018",
-                   title: "Chicken-Broccoli Stir-Fry",
-                   ingredients: [
-                       { name: "4 oz frozen chicken breast", cost: "$1.07" },
-                       { name: "1/2 cup frozen broccoli", cost: "$0.17" },
-                       { name: "1/2 cup frozen peppers and onions", cost: "$0.34" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp teriyaki sauce", cost: "$0.07" },
-                       { name: "1/4 tsp ginger", cost: "$0.02" }
-                   ],
-                   prep: "Cook chicken in oil, add veggies, sauce, ginger; cook 5 min. (15 min)",
-                   nutrition: "~430 kcal, 25 g protein, 4 g fiber, 600 mg sodium",
-                   cost: "$1.81",
-                   snack: {
-                       number: "109",
-                       title: "Cottage Cheese-Chocolate Mix",
-                       ingredients: [
-                           { name: "1/4 cup cottage cheese", cost: "$0.35" },
-                           { name: "1 square Lindt 85% chocolate", cost: "$0.56" },
-                           { name: "1 tsp maple syrup", cost: "$0.21" },
-                           { name: "1/4 tsp vanilla extract", cost: "$0.35" }
-                       ],
-                       prep: "Chop chocolate, mix with cottage cheese, syrup, vanilla. (3 min)",
-                       nutrition: "~220 kcal, 8 g protein, 1 g fiber, 150 mg sodium",
-                       cost: "$1.47"
-                   }
-               },
-               Dessert: {
-                   number: "160",
-                   title: "Cherry-Chia Yogurt Cup",
-                   ingredients: [
-                       { name: "1/4 cup frozen cherries", cost: "$0.56" },
-                       { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                       { name: "1 tbsp chia seeds", cost: "$0.22" },
-                       { name: "1 tsp honey", cost: "$0.12" },
-                       { name: "1/4 tsp vanilla extract", cost: "$0.35" }
-                   ],
-                   prep: "Thaw cherries (microwave 30 sec), mix with yogurt, chia, honey, vanilla. (3 min)",
-                   nutrition: "~190 kcal, 7 g protein, 4 g fiber, 40 mg sodium",
-                   cost: "$1.53"
-               }
-           },
-           Sunday: {
-               Breakfast: {
-                   number: "019",
-                   title: "Egg-Quinoa Veggie Scramble",
-                   ingredients: [
-                       { name: "2 eggs", cost: "$0.33" },
-                       { name: "1/2 cup cooked quinoa", cost: "$0.19" },
-                       { name: "1/2 cup frozen zucchini blend", cost: "$0.24" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp nutritional yeast", cost: "$0.10" },
-                       { name: "1/4 tsp chili powder", cost: "$0.02" },
-                       { name: "1 tsp lemon juice", cost: "$0.03" }
-                   ],
-                   prep: "Heat oil, cook zucchini, quinoa; scramble eggs with yeast, chili powder. Drizzle lemon. (5 min)",
-                   nutrition: "~360 kcal, 18 g protein, 3 g fiber, 250 mg sodium",
-                   cost: "$1.05",
-                   snack: {
-                       number: "110",
-                       title: "Yogurt-Blueberry Chia Cup",
-                       ingredients: [
-                           { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                           { name: "1/4 cup frozen blueberries", cost: "$0.40" },
-                           { name: "1 tbsp chia seeds", cost: "$0.22" },
-                           { name: "1 tsp maple syrup", cost: "$0.21" }
-                       ],
-                       prep: "Mix all, let sit 5 min. (2 min)",
-                       nutrition: "~200 kcal, 7 g protein, 4 g fiber, 40 mg sodium",
-                       cost: "$1.11"
-                   }
-               },
-               Lunch: {
-                   number: "020",
-                   title: "Ground Turkey and Black Bean Power Bowl",
-                   ingredients: [
-                       { name: "4 oz ground turkey", cost: "$1.14" },
-                       { name: "1 Wholly avocado mini", cost: "$0.91" },
-                       { name: "1 tbsp canned pumpkin", cost: "$0.02" },
-                       { name: "1/2 cup canned black beans", cost: "$0.14" },
-                       { name: "1/2 cup cooked quinoa", cost: "$0.19" },
-                       { name: "1/2 cup frozen spinach", cost: "$0.13" },
-                       { name: "1 Dorot garlic cube", cost: "$0.15" },
-                       { name: "1 tbsp olive oil", cost: "$0.27" },
-                       { name: "1/2 tsp cumin", cost: "$0.02" },
-                       { name: "1/4 tsp turmeric", cost: "$0.02" },
-                       { name: "1/4 tsp chili powder", cost: "$0.02" },
-                       { name: "1 tsp nutritional yeast", cost: "$0.10" },
-                       { name: "1 tsp lemon juice", cost: "$0.03" },
-                       { name: "2 tbsp Greek yogurt", cost: "$0.14" }
-                   ],
-                   prep: "Microwave turkey, beans, quinoa, spinach, garlic 2 min. Mix with oil, spices, yeast, lemon, yogurt, avocado, pumpkin. (4 min)",
-                   nutrition: "~540 kcal, 28 g protein, 9 g fiber, 450 mg sodium",
-                   cost: "$3.28",
-                   snack: {
-                       number: "111",
-                       title: "Cottage Cheese-Kiwi Flax Mix",
-                       ingredients: [
-                           { name: "1/4 cup cottage cheese", cost: "$0.35" },
-                           { name: "1 kiwi", cost: "$0.57" },
-                           { name: "1 tsp ground flax seed", cost: "$0.04" },
-                           { name: "1 tsp honey", cost: "$0.12" }
-                       ],
-                       prep: "Dice kiwi, mix with cottage cheese, flax, honey. (3 min)",
-                       nutrition: "~190 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
-                       cost: "$1.08"
-                   }
-               },
-               Dinner: {
-                   number: "021",
-                   title: "Beef-Broccoli Quinoa Bowl",
-                   ingredients: [
-                       { name: "4 oz ground beef", cost: "$1.79" },
-                       { name: "1/2 cup frozen broccoli", cost: "$0.17" },
-                       { name: "1/2 cup cooked quinoa", cost: "$0.19" },
-                       { name: "1 tsp olive oil", cost: "$0.14" },
-                       { name: "1 tsp W Sauce", cost: "$0.17" },
-                       { name: "1/4 tsp black pepper", cost: "$0.02" }
-                   ],
-                   prep: "Cook beef in oil, add broccoli, quinoa, sauce, pepper; cook 5 min. (15 min)",
-                   nutrition: "~460 kcal, 26 g protein, 5 g fiber, 500 mg sodium",
-                   cost: "$2.28",
-                   snack: {
-                       number: "112",
-                       title: "Yogurt-Pumpkin Walnut Mix",
-                       ingredients: [
-                           { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                           { name: "1/4 cup canned pumpkin", cost: "$0.12" },
-                           { name: "1 tbsp walnuts", cost: "$0.33" },
-                           { name: "1 tsp maple syrup", cost: "$0.21" }
-                       ],
-                       prep: "Mix all ingredients. (2 min)",
-                       nutrition: "~210 kcal, 8 g protein, 3 g fiber, 40 mg sodium",
-                       cost: "$0.94"
-                   }
-               },
-               Dessert: {
-                   number: "161",
-                   title: "Raspberry-Flax Yogurt Parfait",
-                   ingredients: [
-                       { name: "1/4 cup frozen raspberries", cost: "$0.33" },
-                       { name: "1/4 cup Greek yogurt", cost: "$0.28" },
-                       { name: "1 tsp ground flax seed", cost: "$0.04" },
-                       { name: "1 tsp maple syrup", cost: "$0.21" },
-                       { name: "1/4 tsp cinnamon", cost: "$0.02" }
-                   ],
-                   prep: "Thaw raspberries (microwave 30 sec), layer with yogurt, flax, syrup, cinnamon. (3 min)",
-                   nutrition: "~170 kcal, 7 g protein, 4 g fiber, 40 mg sodium",
-                   cost: "$0.88"
-               }
-           }
-       };
-
+       let menu = null;
        let selectedDay = null;
        let selectedMeal = null;
        let mealInfoVisible = false;
        let planInfoVisible = false;
+
+       fetch('menu.json')
+           .then(response => response.json())
+           .then(data => {
+               menu = data;
+               updateRecipe();
+               updatePlanInfoTable();
+               updateNutritionTable();
+           })
+           .catch(error => {
+               console.error('Error loading menu:', error);
+               alert('Failed to load menu data. Please try refreshing the page.');
+           });
 
        function selectDay(day) {
            selectedDay = day;
@@ -1129,39 +394,28 @@
            const valueSpan = document.getElementById(`${type}-value`);
            valueSpan.textContent = value;
            const btn = document.getElementById(`${type}-btn`);
-           if (btn) {
-               btn.classList.remove('open');
-           }
+           if (btn) btn.classList.remove('open');
            document.querySelectorAll('.rating-btn').forEach(el => el.classList.remove('open'));
-
            const key = `${selectedDay}-${selectedMeal}-${type}`.toLowerCase();
            localStorage.setItem(key, value);
-
-           setTimeout(() => {
-               document.querySelectorAll('.rating-btn').forEach(el => el.classList.remove('open'));
-           }, 0);
+           setTimeout(() => document.querySelectorAll('.rating-btn').forEach(el => el.classList.remove('open')), 0);
        }
 
        function updateRecipe() {
-           if (selectedDay && selectedMeal) {
+           if (selectedDay && selectedMeal && menu) {
                const recipe = menu[selectedDay][selectedMeal];
                document.getElementById('recipe').style.display = 'block';
                document.getElementById('recipe-title').textContent = recipe.title;
                document.getElementById('cost').innerHTML = `<span class="price">#${recipe.number} ${recipe.cost}</span>`;
-
                const ingredientsList = document.getElementById('ingredients');
                ingredientsList.innerHTML = '<strong>Ingredients:</strong><ul>' +
-                   recipe.ingredients.map(ing => `<li>${ing.name} <span class="price"> - ${ing.cost}</span></li>`).join('') +
-                   '</ul>';
-
+                   recipe.ingredients.map(ing => `<li>${ing.name} <span class="price"> - ${ing.cost}</span></li>`).join('') + '</ul>';
                const prepElement = document.getElementById('prep');
                prepElement.innerHTML = `<strong>Prep:</strong> ${recipe.prep}`;
                prepElement.style.display = 'block';
-
                const nutritionElement = document.getElementById('nutrition');
                nutritionElement.innerHTML = `<strong>Nutrition:</strong> ${recipe.nutrition}`;
                nutritionElement.style.display = mealInfoVisible ? 'block' : 'none';
-
                if (recipe.snack && selectedMeal !== 'Dessert') {
                    const snackElement = document.getElementById('snack');
                    snackElement.innerHTML = `
@@ -1175,7 +429,6 @@
                } else {
                    document.getElementById('snack').style.display = 'none';
                }
-
                const ratings = ['flavor', 'prep', 'cleanup'];
                ratings.forEach(type => {
                    const valueSpan = document.getElementById(`${type}-value`);
@@ -1183,17 +436,11 @@
                    const savedRating = localStorage.getItem(key);
                    valueSpan.textContent = savedRating || '---';
                });
-
                const notesText = document.getElementById('notes-text');
                const notesKey = `${selectedDay}-${selectedMeal}-notes`.toLowerCase();
                notesText.value = localStorage.getItem(notesKey) || '';
-               notesText.oninput = () => {
-                   localStorage.setItem(notesKey, notesText.value);
-               };
-
-               document.querySelectorAll('.price').forEach(el => {
-                   el.style.display = mealInfoVisible ? 'inline' : 'none';
-               });
+               notesText.oninput = () => localStorage.setItem(notesKey, notesText.value);
+               document.querySelectorAll('.price').forEach(el => el.style.display = mealInfoVisible ? 'inline' : 'none');
            } else {
                document.getElementById('recipe').style.display = 'none';
            }
@@ -1201,9 +448,7 @@
 
        function toggleMealInfo() {
            mealInfoVisible = !mealInfoVisible;
-           document.querySelectorAll('.price, .nutrition').forEach(el => {
-               el.style.display = mealInfoVisible ? 'inline' : 'none';
-           });
+           document.querySelectorAll('.price, .nutrition').forEach(el => el.style.display = mealInfoVisible ? 'inline' : 'none');
            updateRecipe();
        }
 
@@ -1212,28 +457,60 @@
            const includeDesserts = document.getElementById('include-desserts').checked;
            localStorage.setItem('includeSnacks', includeSnacks);
            localStorage.setItem('includeDesserts', includeDesserts);
-
-           const costs = {
-               breakfast: 1.03,
-               lunch: 1.61,
-               dinner: 2.12,
-               snack: 1.02,
-               dessert: 1.16
-           };
-
+           const costs = { breakfast: 1.03, lunch: 1.61, dinner: 2.12, snack: 1.02, dessert: 1.16 };
            let totalDay = costs.breakfast + costs.lunch + costs.dinner;
            if (includeSnacks) totalDay += costs.snack;
            if (includeDesserts) totalDay += costs.dessert;
-
            const periods = [
                { id: 'day', factor: 1, value: totalDay },
                { id: 'week', factor: 7, value: totalDay * 7 },
                { id: 'month', factor: 30.42, value: totalDay * 30.42 },
                { id: 'year', factor: 365, value: totalDay * 365 }
            ];
+           periods.forEach(period => document.getElementById(`total-${period.id}`).textContent = `$${period.value.toFixed(2)}`);
+           const snacksRow = document.getElementById('snacks-row');
+           const dessertsRow = document.getElementById('desserts-row');
+           snacksRow.classList.toggle('grayed-out', !includeSnacks);
+           dessertsRow.classList.toggle('grayed-out', !includeDesserts);
+       }
 
-           periods.forEach(period => {
-               document.getElementById(`total-${period.id}`).textContent = `$${period.value.toFixed(2)}`;
+       function updateNutritionTable() {
+           const includeSnacks = document.getElementById('include-snacks').checked;
+           const includeDesserts = document.getElementById('include-desserts').checked;
+           const baseNutrition = {
+               calories: 1230, protein: 68, fiber: 16, sodium: 1250, fat: 45, carbs: 140
+           };
+           const snackNutrition = { calories: 200, protein: 8, fiber: 3, sodium: 100, fat: 8, carbs: 20 };
+           const dessertNutrition = { calories: 190, protein: 7, fiber: 3, sodium: 50, fat: 7, carbs: 20 };
+           let nutrition = { ...baseNutrition };
+           if (includeSnacks) {
+               nutrition.calories += snackNutrition.calories;
+               nutrition.protein += snackNutrition.protein;
+               nutrition.fiber += snackNutrition.fiber;
+               nutrition.sodium += snackNutrition.sodium;
+               nutrition.fat += snackNutrition.fat;
+               nutrition.carbs += snackNutrition.carbs;
+           }
+           if (includeDesserts) {
+               nutrition.calories += dessertNutrition.calories;
+               nutrition.protein += dessertNutrition.protein;
+               nutrition.fiber += dessertNutrition.fiber;
+               nutrition.sodium += dessertNutrition.sodium;
+               nutrition.fat += dessertNutrition.fat;
+               nutrition.carbs += dessertNutrition.carbs;
+           }
+           const periods = [
+               { id: 'day', factor: 1 },
+               { id: 'week', factor: 7 },
+               { id: 'month', factor: 30.42 },
+               { id: 'year', factor: 365 }
+           ];
+           const metrics = ['calories', 'protein', 'fiber', 'sodium', 'fat', 'carbs'];
+           metrics.forEach(metric => {
+               periods.forEach(period => {
+                   const value = Math.round(nutrition[metric] * period.factor);
+                   document.getElementById(`${metric}-${period.id}`).textContent = value;
+               });
            });
        }
 
@@ -1250,6 +527,7 @@
                    if (btn.id !== 'toggle-plan-info') btn.classList.remove('selected-meal');
                });
                updatePlanInfoTable();
+               updateNutritionTable();
            }
            updateRecipe();
        }
@@ -1259,10 +537,16 @@
            const includeDesserts = localStorage.getItem('includeDesserts') !== 'false';
            document.getElementById('include-snacks').checked = includeSnacks;
            document.getElementById('include-desserts').checked = includeDesserts;
-
-           document.getElementById('include-snacks').addEventListener('change', updatePlanInfoTable);
-           document.getElementById('include-desserts').addEventListener('change', updatePlanInfoTable);
+           document.getElementById('include-snacks').addEventListener('change', () => {
+               updatePlanInfoTable();
+               updateNutritionTable();
+           });
+           document.getElementById('include-desserts').addEventListener('change', () => {
+               updatePlanInfoTable();
+               updateNutritionTable();
+           });
            updatePlanInfoTable();
+           updateNutritionTable();
        });
 
        document.addEventListener('click', (e) => {
