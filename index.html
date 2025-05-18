@@ -304,7 +304,7 @@
                        <div onclick="setRating('flavor', '10')">10</div>
                    </div>
                </div>
-               <div class="rating-btn" id="prep-btn" onclick="toggleRating('prep')">
+               <div class="rating-btn" id="prep-btn" onclick="toggleRating('pre')">
                    Prep: <span id="prep-value">---</span>
                    <div class="rating-options" id="prep-options">
                        <div onclick="setRating('prep', '1')">1</div>
@@ -538,6 +538,7 @@
            mealTypes.forEach(meal => {
                const avgCost = costs[meal] || 0;
                totalDay += meal === 'Snack' && !includeSnacks ? 0 : meal === 'Dessert' && !includeDesserts ? 0 : avgCost;
+               const domKey = meal === 'Lunch' ? 'lunches' : meal.toLowerCase() + 's';
                const periods = [
                    { id: 'day', factor: 1, value: avgCost },
                    { id: 'week', factor: 7, value: avgCost * 7 },
@@ -545,7 +546,7 @@
                    { id: 'year', factor: 365, value: avgCost * 365 }
                ];
                periods.forEach(period => {
-                   const element = document.getElementById(`${meal.toLowerCase()}s-${period.id}`);
+                   const element = document.getElementById(`${domKey}-${period.id}`);
                    if (element) {
                        element.textContent = `$${period.value.toFixed(2)}`;
                    }
@@ -589,7 +590,7 @@
                periods.forEach(period => {
                    const element = document.getElementById(`${metric}-${period.id}`);
                    if (element) {
-                       element.textContent = Math.round(total * period.factor);
+                       element.textContent = Math.round(total * period.factor) || 0;
                    }
                });
            });
