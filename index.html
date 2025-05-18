@@ -244,257 +244,73 @@
        </div>
    </div>
    <div id="plan-info">
-    <h2 class="text-xl font-bold mb-4 text-center">Average Costs</h2>
-    <table class="w-full border-collapse border border-gray-300 text-lg">
-        <thead>
-            <tr class="bg-gray-200">
-                <th class="border border-gray-300 p-2"></th>
-                <th class="border border-gray-300 p-2">Day</th>
-                <th class="border border-gray-300 p-2">Week</th>
-                <th class="border border-gray-300 p-2">Month</th>
-                <th class="border border-gray-300 p-2">Year</th>
-            </tr>
-        </thead>
-        <tbody id="cost-table-body">
-            <tr><td class="border border-gray-300 p-2 font-bold">Breakfasts</td><td class="border border-gray-300 p-2 text-center">$1.03</td><td class="border border-gray-300 p-2 text-center">$7.21</td><td class="border border-gray-300 p-2 text-center">$31.33</td><td class="border border-gray-300 p-2 text-center">$375.95</td></tr>
-            <tr><td class="border border-gray-300 p-2 font-bold">Lunches</td><td class="border border-gray-300 p-2 text-center">$1.61</td><td class="border border-gray-300 p-2 text-center">$11.27</td><td class="border border-gray-300 p-2 text-center">$48.98</td><td class="border border-gray-300 p-2 text-center">$587.65</td></tr>
-            <tr><td class="border border-gray-300 p-2 font-bold">Dinners</td><td class="border border-gray-300 p-2 text-center">$2.12</td><td class="border border-gray-300 p-2 text-center">$14.84</td><td class="border border-gray-300 p-2 text-center">$64.49</td><td class="border border-gray-300 p-2 text-center">$773.80</td></tr>
-            <tr><td class="border border-gray-300 p-2 font-bold">Snacks</td><td class="border border-gray-300 p-2 text-center">$1.02</td><td class="border border-gray-300 p-2 text-center">$7.14</td><td class="border border-gray-300 p-2 text-center">$31.03</td><td class="border border-gray-300 p-2 text-center">$372.30</td></tr>
-            <tr><td class="border border-gray-300 p-2 font-bold">Desserts</td><td class="border border-gray-300 p-2 text-center">$1.16</td><td class="border border-gray-300 p-2 text-center">$8.12</td><td class="border border-gray-300 p-2 text-center">$35.29</td><td class="border border-gray-300 p-2 text-center">$423.40</td></tr>
-            <tr><td class="border border-gray-300 p-2 font-bold">Total</td><td class="border border-gray-300 p-2 text-center" id="total-day">$6.94</td><td class="border border-gray-300 p-2 text-center" id="total-week">$48.58</td><td class="border border-gray-300 p-2 text-center" id="total-month">$211.12</td><td class="border border-gray-300 p-2 text-center" id="total-year">$2533.10</td></tr>
-        </tbody>
-    </table>
-    <h2 class="text-xl font-bold mt-6 mb-4 text-center">Average Nutrition</h2>
-    <table class="w-full border-collapse border border-gray-300 text-lg">
-        <thead>
-            <tr class="bg-gray-200">
-                <th class="border border-gray-300 p-2"></th>
-                <th class="border border-gray-300 p-2">Day</th>
-                <th class="border border-gray-300 p-2">Week</th>
-                <th class="border border-gray-300 p-2">Month</th>
-                <th class="border border-gray-300 p-2">Year</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td class="border border-gray-300 p-2 font-bold">Calories (kcal)</td><td class="border border-gray-300 p-2 text-center" id="calories-day">1620</td><td class="border border-gray-300 p-2 text-center" id="calories-week">11340</td><td class="border border-gray-300 p-2 text-center" id="calories-month">49280</td><td class="border border-gray-300 p-2 text-center" id="calories-year">590900</td></tr>
-            <tr><td class="border border-gray-300 p-2 font-bold">Protein (g)</td><td class="border border-gray-300 p-2 text-center" id="protein-day">83</td><td class="border border-gray-300 p-2 text-center" id="protein-week">581</td><td class="border border-gray-300 p-2 text-center" id="protein-month">2525</td><td class="border border-gray-300 p-2 text-center" id="protein-year">30295</td></tr>
-            <tr><td class="border border-gray-300 p-2 font-bold">Fiber (g)</td><td class="border border-gray-300 p-2 text-center" id="fiber-day">22</td><td class="border border-gray-300 p-2 text-center" id="fiber-week">154</td><td class="border border-gray-300 p-2 text-center" id="fiber-month">669</td><td class="border border-gray-300 p-2 text-center" id="fiber-year">8030</td></tr>
-            <tr><td class="border border-gray-300 p-2 font-bold">Sodium (mg)</td><td class="border border-gray-300 p-2 text-center" id="sodium-day">1400</td><td class="border border-gray-300 p-2 text-center" id="sodium-week">9800</td><td class="border border-gray-300 p-2 text-center" id="sodium-month">42588</td><td class="border border-gray-300 p-2 text-center" id="sodium-year">511000</td></tr>
-            <tr><td class="border border-gray-300 p-2 font-bold">Fat (g)</td><td class="border border-gray-300 p-2 text-center" id="fat-day">60</td><td class="border border-gray-300 p-2 text-center" id="fat-week">420</td><td class="border border-gray-300 p-2 text-center" id="fat-month">1825</td><td class="border border-gray-300 p-2 text-center" id="fat-year">21900</td></tr>
-            <tr><td class="border border-gray-300 p-2 font-bold">Carbohydrates (g)</td><td class="border border-gray-300 p-2 text-center" id="carbs-day">180</td><td class="border border-gray-300 p-2 text-center" id="carbs-week">1260</td><td class="border border-gray-300 p-2 text-center" id="carbs-month">5476</td><td class="border border-gray-300 p-2 text-center" id="carbs-year">65700</td></tr>
-        </tbody>
-    </table>
-    <div class="mt-4 flex justify-center space-x-4">
-        <label class="flex items-center">
-            <input type="checkbox" id="include-snacks" checked class="mr-2">
-            Include 1 Snack Per Day
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" id="include-desserts" checked class="mr-2">
-            Include 1 Dessert Per Day
-        </label>
-    </div>
-</div>
-
-<script>
-    const menu = { /* Your existing menu object, unchanged from artifact_version_id: 2e637b0eb089 */ };
-
-    let selectedDay = null;
-    let selectedMeal = null;
-    let mealInfoVisible = false;
-    let planInfoVisible = false;
-
-    function selectDay(day) {
-        selectedDay = day;
-        document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('selected-day'));
-        document.querySelector(`button[onclick="selectDay('${day}')"]`).classList.add('selected-day');
-        planInfoVisible = false;
-        document.getElementById('plan-info').style.display = 'none';
-        document.getElementById('toggle-plan-info').classList.remove('selected-meal');
-        updateRecipe();
-    }
-
-    function selectMeal(meal) {
-        selectedMeal = meal;
-        document.querySelectorAll('.meal-btn').forEach(btn => btn.classList.remove('selected-meal'));
-        document.querySelector(`button[onclick="selectMeal('${meal}')"]`).classList.add('selected-meal');
-        planInfoVisible = false;
-        document.getElementById('plan-info').style.display = 'none';
-        document.getElementById('toggle-plan-info').classList.remove('selected-meal');
-        updateRecipe();
-    }
-
-    function toggleRating(type) {
-        const btn = document.getElementById(`${type}-btn`);
-        btn.classList.toggle('open');
-        document.querySelectorAll('.rating-btn').forEach(el => {
-            if (el !== btn) el.classList.remove('open');
-        });
-    }
-
-    function setRating(type, value) {
-        const valueSpan = document.getElementById(`${type}-value`);
-        valueSpan.textContent = value;
-        const btn = document.getElementById(`${type}-btn`);
-        if (btn) btn.classList.remove('open');
-        document.querySelectorAll('.rating-btn').forEach(el => el.classList.remove('open'));
-        const key = `${selectedDay}-${selectedMeal}-${type}`.toLowerCase();
-        localStorage.setItem(key, value);
-        setTimeout(() => document.querySelectorAll('.rating-btn').forEach(el => el.classList.remove('open')), 0);
-    }
-
-    function updateRecipe() {
-        if (selectedDay && selectedMeal) {
-            const recipe = menu[selectedDay][selectedMeal];
-            document.getElementById('recipe').style.display = 'block';
-            document.getElementById('recipe-title').textContent = recipe.title;
-            document.getElementById('cost').innerHTML = `<span class="price">#${recipe.number} ${recipe.cost}</span>`;
-            const ingredientsList = document.getElementById('ingredients');
-            ingredientsList.innerHTML = '<strong>Ingredients:</strong><ul>' +
-                recipe.ingredients.map(ing => `<li>${ing.name} <span class="price"> - ${ing.cost}</span></li>`).join('') + '</ul>';
-            const prepElement = document.getElementById('prep');
-            prepElement.innerHTML = `<strong>Prep:</strong> ${recipe.prep}`;
-            prepElement.style.display = 'block';
-            const nutritionElement = document.getElementById('nutrition');
-            nutritionElement.innerHTML = `<strong>Nutrition:</strong> ${recipe.nutrition}`;
-            nutritionElement.style.display = mealInfoVisible ? 'block' : 'none';
-            if (recipe.snack && selectedMeal !== 'Dessert') {
-                const snackElement = document.getElementById('snack');
-                snackElement.innerHTML = `
-                    <strong>Post-Meal Snack:</strong> ${recipe.snack.title}<br>
-                    <span class="price">#${recipe.snack.number} ${recipe.snack.cost}</span><br>
-                    <strong>Ingredients:</strong><ul class="mb-4">${recipe.snack.ingredients.map(ing => `<li>${ing.name} <span class="price"> - ${ing.cost}</span></li>`).join('')}</ul>
-                    <strong class="mb-4">Prep:</strong> ${recipe.snack.prep}<br>
-                    <p class="nutrition"><strong>Nutrition:</strong> ${recipe.snack.nutrition}</p>`;
-                snackElement.style.display = 'block';
-                snackElement.querySelector('.nutrition').style.display = mealInfoVisible ? 'block' : 'none';
-            } else {
-                document.getElementById('snack').style.display = 'none';
-            }
-            const ratings = ['flavor', 'prep', 'cleanup'];
-            ratings.forEach(type => {
-                const valueSpan = document.getElementById(`${type}-value`);
-                const key = `${selectedDay}-${selectedMeal}-${type}`.toLowerCase();
-                const savedRating = localStorage.getItem(key);
-                valueSpan.textContent = savedRating || '---';
-            });
-            const notesText = document.getElementById('notes-text');
-            const notesKey = `${selectedDay}-${selectedMeal}-notes`.toLowerCase();
-            notesText.value = localStorage.getItem(notesKey) || '';
-            notesText.oninput = () => localStorage.setItem(notesKey, notesText.value);
-            document.querySelectorAll('.price').forEach(el => el.style.display = mealInfoVisible ? 'inline' : 'none');
-        } else {
-            document.getElementById('recipe').style.display = 'none';
-        }
-    }
-
-    function toggleMealInfo() {
-        mealInfoVisible = !mealInfoVisible;
-        document.querySelectorAll('.price, .nutrition').forEach(el => el.style.display = mealInfoVisible ? 'inline' : 'none');
-        updateRecipe();
-    }
-
-    function updatePlanInfoTable() {
-        const includeSnacks = document.getElementById('include-snacks').checked;
-        const includeDesserts = document.getElementById('include-desserts').checked;
-        localStorage.setItem('includeSnacks', includeSnacks);
-        localStorage.setItem('includeDesserts', includeDesserts);
-        const costs = { breakfast: 1.03, lunch: 1.61, dinner: 2.12, snack: 1.02, dessert: 1.16 };
-        let totalDay = costs.breakfast + costs.lunch + costs.dinner;
-        if (includeSnacks) totalDay += costs.snack;
-        if (includeDesserts) totalDay += costs.dessert;
-        const periods = [
-            { id: 'day', factor: 1, value: totalDay },
-            { id: 'week', factor: 7, value: totalDay * 7 },
-            { id: 'month', factor: 30.42, value: totalDay * 30.42 },
-            { id: 'year', factor: 365, value: totalDay * 365 }
-        ];
-        periods.forEach(period => document.getElementById(`total-${period.id}`).textContent = `$${period.value.toFixed(2)}`);
-    }
-
-    function updateNutritionTable() {
-        const includeSnacks = document.getElementById('include-snacks').checked;
-        const includeDesserts = document.getElementById('include-desserts').checked;
-        localStorage.setItem('includeSnacks', includeSnacks);
-        localStorage.setItem('includeDesserts', includeDesserts);
-        const baseNutrition = {
-            calories: 1230, protein: 68, fiber: 16, sodium: 1250, fat: 45, carbs: 140
-        };
-        const snackNutrition = { calories: 200, protein: 8, fiber: 3, sodium: 100, fat: 8, carbs: 20 };
-        const dessertNutrition = { calories: 190, protein: 7, fiber: 3, sodium: 50, fat: 7, carbs: 20 };
-        let nutrition = { ...baseNutrition };
-        if (includeSnacks) {
-            nutrition.calories += snackNutrition.calories;
-            nutrition.protein += snackNutrition.protein;
-            nutrition.fiber += snackNutrition.fiber;
-            nutrition.sodium += snackNutrition.sodium;
-            nutrition.fat += snackNutrition.fat;
-            nutrition.carbs += snackNutrition.carbs;
-        }
-        if (includeDesserts) {
-            nutrition.calories += dessertNutrition.calories;
-            nutrition.protein += dessertNutrition.protein;
-            nutrition.fiber += dessertNutrition.fiber;
-            nutrition.sodium += dessertNutrition.sodium;
-            nutrition.fat += dessertNutrition.fat;
-            nutrition.carbs += dessertNutrition.carbs;
-        }
-        const periods = [
-            { id: 'day', factor: 1 },
-            { id: 'week', factor: 7 },
-            { id: 'month', factor: 30.42 },
-            { id: 'year', factor: 365 }
-        ];
-        const metrics = ['calories', 'protein', 'fiber', 'sodium', 'fat', 'carbs'];
-        metrics.forEach(metric => {
-            periods.forEach(period => {
-                const value = Math.round(nutrition[metric] * period.factor);
-                document.getElementById(`${metric}-${period.id}`).textContent = value;
-            });
-        });
-    }
-
-    function togglePlanInfo() {
-        planInfoVisible = !planInfoVisible;
-        document.getElementById('plan-info').style.display = planInfoVisible ? 'block' : 'none';
-        document.getElementById('toggle-plan-info').classList.toggle('selected-meal', planInfoVisible);
-        if (planInfoVisible) {
-            selectedDay = null;
-            selectedMeal = null;
-            document.getElementById('recipe').style.display = 'none';
-            document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('selected-day'));
-            document.querySelectorAll('.meal-btn').forEach(btn => {
-                if (btn.id !== 'toggle-plan-info') btn.classList.remove('selected-meal');
-            });
-            updatePlanInfoTable();
-            updateNutritionTable();
-        }
-        updateRecipe();
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const includeSnacks = localStorage.getItem('includeSnacks') !== 'false';
-        const includeDesserts = localStorage.getItem('includeDesserts') !== 'false';
-        document.getElementById('include-snacks').checked = includeSnacks;
-        document.getElementById('include-desserts').checked = includeDesserts;
-        document.getElementById('include-snacks').addEventListener('change', () => {
-            updatePlanInfoTable();
-            updateNutritionTable();
-        });
-        document.getElementById('include-desserts').addEventListener('change', () => {
-            updatePlanInfoTable();
-            updateNutritionTable();
-        });
-        updatePlanInfoTable();
-        updateNutritionTable();
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.rating-btn')) {
-            document.querySelectorAll('.rating-btn').forEach(btn => btn.classList.remove('open'));
-        }
-    });
-</script>
+       <h2 class="text-xl font-bold mb-4 text-center">Average Costs</h2>
+       <table class="w-full border-collapse border border-gray-300 text-lg">
+           <thead>
+               <tr class="bg-gray-200">
+                   <th class="border border-gray-300 p-2"></th>
+                   <th class="border border-gray-300 p-2">Day</th>
+                   <th class="border border-gray-300 p-2">Week</th>
+                   <th class="border border-gray-300 p-2">Month</th>
+                   <th class="border border-gray-300 p-2">Year</th>
+               </tr>
+           </thead>
+           <tbody id="cost-table-body">
+               <tr>
+                   <td class="border border-gray-300 p-2 font-bold">Breakfasts</td>
+                   <td class="border border-gray-300 p-2 text-center">$1.03</td>
+                   <td class="border border-gray-300 p-2 text-center">$7.21</td>
+                   <td class="border border-gray-300 p-2 text-center">$31.33</td>
+                   <td class="border border-gray-300 p-2 text-center">$375.95</td>
+               </tr>
+               <tr>
+                   <td class="border border-gray-300 p-2 font-bold">Lunches</td>
+                   <td class="border border-gray-300 p-2 text-center">$1.61</td>
+                   <td class="border border-gray-300 p-2 text-center">$11.27</td>
+                   <td class="border border-gray-300 p-2 text-center">$48.98</td>
+                   <td class="border border-gray-300 p-2 text-center">$587.65</td>
+               </tr>
+               <tr>
+                   <td class="border border-gray-300 p-2 font-bold">Dinners</td>
+                   <td class="border border-gray-300 p-2 text-center">$2.12</td>
+                   <td class="border border-gray-300 p-2 text-center">$14.84</td>
+                   <td class="border border-gray-300 p-2 text-center">$64.49</td>
+                   <td class="border border-gray-300 p-2 text-center">$773.80</td>
+               </tr>
+               <tr>
+                   <td class="border border-gray-300 p-2 font-bold">Snacks</td>
+                   <td class="border border-gray-300 p-2 text-center">$1.02</td>
+                   <td class="border border-gray-300 p-2 text-center">$7.14</td>
+                   <td class="border border-gray-300 p-2 text-center">$31.03</td>
+                   <td class="border border-gray-300 p-2 text-center">$372.30</td>
+               </tr>
+               <tr>
+                   <td class="border border-gray-300 p-2 font-bold">Desserts</td>
+                   <td class="border border-gray-300 p-2 text-center">$1.16</td>
+                   <td class="border border-gray-300 p-2 text-center">$8.12</td>
+                   <td class="border border-gray-300 p-2 text-center">$35.29</td>
+                   <td class="border border-gray-300 p-2 text-center">$423.40</td>
+               </tr>
+               <tr>
+                   <td class="border border-gray-300 p-2 font-bold">Total</td>
+                   <td class="border border-gray-300 p-2 text-center" id="total-day">$6.94</td>
+                   <td class="border border-gray-300 p-2 text-center" id="total-week">$48.58</td>
+                   <td class="border border-gray-300 p-2 text-center" id="total-month">$211.12</td>
+                   <td class="border border-gray-300 p-2 text-center" id="total-year">$2533.10</td>
+               </tr>
+           </tbody>
+       </table>
+       <div class="mt-4 flex justify-center space-x-4">
+           <label class="flex items-center">
+               <input type="checkbox" id="include-snacks" checked class="mr-2">
+               Include Snacks
+           </label>
+           <label class="flex items-center">
+               <input type="checkbox" id="include-desserts" checked class="mr-2">
+               Include Desserts
+           </label>
+       </div>
+   </div>
    <div id="recipe" class="hidden">
        <div id="recipe-container">
            <h2 id="recipe-title" class="text-2xl font-bold text-center mb-4"></h2>
