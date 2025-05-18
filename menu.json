@@ -1,0 +1,718 @@
+{
+    "Monday": {
+        "Breakfast": {
+            "number": "001",
+            "title": "Spinach-Egg Scramble with Ezekiel Toast",
+            "ingredients": [
+                { "name": "2 eggs", "cost": "$0.33" },
+                { "name": "1/2 cup frozen spinach", "cost": "$0.13" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 Dorot garlic cube", "cost": "$0.15" },
+                { "name": "1 slice Ezekiel bread", "cost": "$0.28" },
+                { "name": "1 tsp lemon juice", "cost": "$0.03" },
+                { "name": "1/4 tsp turmeric", "cost": "$0.02" }
+            ],
+            "prep": "Microwave spinach 1 min, drain. Heat oil, garlic cube; scramble eggs with spinach, turmeric. Toast bread, drizzle lemon juice. (5 min)",
+            "nutrition": "~350 kcal, 18 g protein, 5 g fiber, 350 mg sodium",
+            "cost": "$1.08",
+            "snack": {
+                "number": "092",
+                "title": "Yogurt-Blueberry Flax Cup",
+                "ingredients": [
+                    { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                    { "name": "1/4 cup frozen blueberries", "cost": "$0.40" },
+                    { "name": "1 tsp ground flax seed", "cost": "$0.04" },
+                    { "name": "1 tsp maple syrup", "cost": "$0.21" }
+                ],
+                "prep": "Mix all, let sit 5 min. (2 min)",
+                "nutrition": "~180 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
+                "cost": "$0.93"
+            }
+        },
+        "Lunch": {
+            "number": "002",
+            "title": "Tuna-Kale Salad",
+            "ingredients": [
+                { "name": "1 can tuna", "cost": "$0.91" },
+                { "name": "1/2 cup frozen kale", "cost": "$0.16" },
+                { "name": "1 tsp lemon juice", "cost": "$0.03" },
+                { "name": "1/4 tsp lemon pepper salt", "cost": "$0.04" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" }
+            ],
+            "prep": "Thaw kale (microwave 1 min or fridge overnight), mix with drained tuna, lemon juice, seasoning, olive oil. (3 min)",
+            "nutrition": "~320 kcal, 24 g protein, 5 g fiber, 400 mg sodium",
+            "cost": "$1.28",
+            "snack": {
+                "number": "093",
+                "title": "Cottage Cheese-Prune Mix",
+                "ingredients": [
+                    { "name": "1/4 cup cottage cheese", "cost": "$0.35" },
+                    { "name": "2 prunes", "cost": "$0.34" },
+                    { "name": "1 tsp honey", "cost": "$0.12" },
+                    { "name": "1/4 tsp cinnamon", "cost": "$0.02" }
+                ],
+                "prep": "Chop prunes, mix with cottage cheese, honey, cinnamon. (3 min)",
+                "nutrition": "~200 kcal, 8 g protein, 3 g fiber, 150 mg sodium",
+                "cost": "$0.83"
+            }
+        },
+        "Dinner": {
+            "number": "003",
+            "title": "Chicken-Zucchini Quinoa Bowl",
+            "ingredients": [
+                { "name": "4 oz frozen chicken breast", "cost": "$1.07" },
+                { "name": "1/2 cup cooked quinoa", "cost": "$0.19" },
+                { "name": "1/2 cup frozen zucchini blend", "cost": "$0.24" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp teriyaki sauce", "cost": "$0.07" },
+                { "name": "1/4 tsp cumin", "cost": "$0.02" }
+            ],
+            "prep": "Thaw/cook chicken (bake 375°F, 20 min), slice. Microwave quinoa, zucchini 2 min. Toss with oil, teriyaki, cumin. (25 min)",
+            "nutrition": "~500 kcal, 25 g protein, 5 g fiber, 600 mg sodium",
+            "cost": "$1.73",
+            "snack": {
+                "number": "094",
+                "title": "Peanut Butter-Apple Dip",
+                "ingredients": [
+                    { "name": "1/2 Granny Smith apple", "cost": "$0.33" },
+                    { "name": "1 tbsp peanut butter", "cost": "$0.14" },
+                    { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                    { "name": "1/4 tsp vanilla extract", "cost": "$0.35" }
+                ],
+                "prep": "Slice apple, mix yogurt, peanut butter, vanilla. Dip and eat. (3 min)",
+                "nutrition": "~220 kcal, 8 g protein, 3 g fiber, 50 mg sodium",
+                "cost": "$1.10"
+            }
+        },
+        "Dessert": {
+            "number": "155",
+            "title": "Apple-Peanut Butter Yogurt Dip",
+            "ingredients": [
+                { "name": "1/2 Granny Smith apple", "cost": "$0.33" },
+                { "name": "1 tbsp peanut butter", "cost": "$0.14" },
+                { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                { "name": "1 tsp honey", "cost": "$0.12" },
+                { "name": "1/4 tsp cinnamon", "cost": "$0.02" }
+            ],
+            "prep": "Slice apple, mix yogurt, peanut butter, honey, cinnamon. Dip and eat. (3 min)",
+            "nutrition": "~200 kcal, 8 g protein, 3 g fiber, 50 mg sodium",
+            "cost": "$0.89"
+        }
+    },
+    "Tuesday": {
+        "Breakfast": {
+            "number": "004",
+            "title": "Egg-Tomato Avocado Scramble",
+            "ingredients": [
+                { "name": "2 eggs", "cost": "$0.33" },
+                { "name": "1/4 cup canned diced tomatoes", "cost": "$0.07" },
+                { "name": "1 Wholly avocado mini", "cost": "$0.91" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1/4 tsp chili powder", "cost": "$0.02" }
+            ],
+            "prep": "Heat oil, scramble eggs with tomatoes, chili powder. Top with avocado. (5 min)",
+            "nutrition": "~380 kcal, 16 g protein, 4 g fiber, 300 mg sodium",
+            "cost": "$1.47",
+            "snack": {
+                "number": "095",
+                "title": "Kefir-Raspberry Chia Cup",
+                "ingredients": [
+                    { "name": "1/2 cup kefir", "cost": "$0.29" },
+                    { "name": "1/4 cup frozen raspberries", "cost": "$0.33" },
+                    { "name": "1 tbsp chia seeds", "cost": "$0.22" },
+                    { "name": "1 tsp honey", "cost": "$0.12" }
+                ],
+                "prep": "Mix all, let sit 5 min. (2 min)",
+                "nutrition": "~190 kcal, 6 g protein, 4 g fiber, 60 mg sodium",
+                "cost": "$0.96"
+            }
+        },
+        "Lunch": {
+            "number": "005",
+            "title": "Canned Chicken-Quinoa Veggie Bowl",
+            "ingredients": [
+                { "name": "5.22 oz canned chicken", "cost": "$0.93" },
+                { "name": "1/2 cup cooked quinoa", "cost": "$0.19" },
+                { "name": "1/2 cup frozen broccoli", "cost": "$0.17" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp lemon juice", "cost": "$0.03" },
+                { "name": "1/4 tsp cumin", "cost": "$0.02" }
+            ],
+            "prep": "Microwave broccoli 2 min, mix with chicken, quinoa, oil, lemon, cumin. (3 min)",
+            "nutrition": "~450 kcal, 24 g protein, 5 g fiber, 400 mg sodium",
+            "cost": "$1.48",
+            "snack": {
+                "number": "096",
+                "title": "Yogurt-Walnut Pumpkin Mix",
+                "ingredients": [
+                    { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                    { "name": "1 tbsp walnuts", "cost": "$0.33" },
+                    { "name": "1/4 cup canned pumpkin", "cost": "$0.12" },
+                    { "name": "1/4 tsp pumpkin pie spice", "cost": "$0.04" }
+                ],
+                "prep": "Mix all ingredients. (2 min)",
+                "nutrition": "~190 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
+                "cost": "$0.77"
+            }
+        },
+        "Dinner": {
+            "number": "006",
+            "title": "Salmon-Kale Quinoa Bowl",
+            "ingredients": [
+                { "name": "4 oz frozen salmon", "cost": "$1.68" },
+                { "name": "1/2 cup cooked quinoa", "cost": "$0.19" },
+                { "name": "1/2 cup frozen kale", "cost": "$0.16" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp lemon juice", "cost": "$0.03" },
+                { "name": "1/4 tsp cumin", "cost": "$0.02" }
+            ],
+            "prep": "Bake salmon (400°F, 15 min). Microwave quinoa, kale 2 min. Toss with oil, lemon, cumin. (20 min)",
+            "nutrition": "~480 kcal, 26 g protein, 5 g fiber, 350 mg sodium",
+            "cost": "$2.22",
+            "snack": {
+                "number": "097",
+                "title": "Cottage Cheese-Cherry Mix",
+                "ingredients": [
+                    { "name": "1/4 cup cottage cheese", "cost": "$0.35" },
+                    { "name": "1/4 cup frozen cherries", "cost": "$0.56" },
+                    { "name": "1 tsp maple syrup", "cost": "$0.21" },
+                    { "name": "1/4 tsp vanilla extract", "cost": "$0.35" }
+                ],
+                "prep": "Thaw cherries (microwave 30 sec), mix with cottage cheese, syrup, vanilla. (3 min)",
+                "nutrition": "~210 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
+                "cost": "$1.47"
+            }
+        },
+        "Dessert": {
+            "number": "156",
+            "title": "Blueberry-Chia Kefir Pudding",
+            "ingredients": [
+                { "name": "1/4 cup frozen blueberries", "cost": "$0.40" },
+                { "name": "1 tbsp chia seeds", "cost": "$0.22" },
+                { "name": "1/2 cup kefir", "cost": "$0.29" },
+                { "name": "1 tsp maple syrup", "cost": "$0.21" },
+                { "name": "1/4 tsp vanilla extract", "cost": "$0.35" }
+            ],
+            "prep": "Mix all, let sit 10 min or fridge overnight. (2 min)",
+            "nutrition": "~180 kcal, 6 g protein, 4 g fiber, 60 mg sodium",
+            "cost": "$1.47"
+        }
+    },
+    "Wednesday": {
+        "Breakfast": {
+            "number": "007",
+            "title": "Enhanced Egg-Pepper Oat Muffin",
+            "ingredients": [
+                { "name": "2 eggs", "cost": "$0.33" },
+                { "name": "1/4 cup quick oats", "cost": "$0.04" },
+                { "name": "1/4 cup frozen green peppers", "cost": "$0.15" },
+                { "name": "1/4 cup frozen spinach", "cost": "$0.06" },
+                { "name": "1 tbsp canned diced tomatoes", "cost": "$0.02" },
+                { "name": "1 tbsp cottage cheese", "cost": "$0.14" },
+                { "name": "1 tsp nutritional yeast", "cost": "$0.10" },
+                { "name": "1 tsp ground flax seed", "cost": "$0.04" },
+                { "name": "1/4 tsp everything bagel seasoning", "cost": "$0.02" },
+                { "name": "1 tsp lemon juice", "cost": "$0.03" },
+                { "name": "1/4 tsp chili powder", "cost": "$0.02" },
+                { "name": "1 tbsp kefir", "cost": "$0.07" },
+                { "name": "1 tsp balsamic vinegar", "cost": "$0.07" }
+            ],
+            "prep": "Mix all, microwave in mug 2–3 min. Top with vinegar. (5 min)",
+            "nutrition": "~360 kcal, 20 g protein, 6 g fiber, 400 mg sodium",
+            "cost": "$1.09",
+            "snack": {
+                "number": "098",
+                "title": "Yogurt-Kiwi Chia Cup",
+                "ingredients": [
+                    { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                    { "name": "1 kiwi", "cost": "$0.57" },
+                    { "name": "1 tbsp chia seeds", "cost": "$0.22" },
+                    { "name": "1 tsp honey", "cost": "$0.12" }
+                ],
+                "prep": "Dice kiwi, mix with yogurt, chia, honey. Let sit 5 min. (3 min)",
+                "nutrition": "~200 kcal, 7 g protein, 4 g fiber, 40 mg sodium",
+                "cost": "$1.19"
+            }
+        },
+        "Lunch": {
+            "number": "008",
+            "title": "Sardine-Spinach Salad",
+            "ingredients": [
+                { "name": "1 can sardines", "cost": "$1.12" },
+                { "name": "1/2 cup frozen spinach", "cost": "$0.13" },
+                { "name": "1 tbsp walnuts", "cost": "$0.33" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp balsamic vinegar", "cost": "$0.07" },
+                { "name": "1/4 tsp black pepper", "cost": "$0.02" }
+            ],
+            "prep": "Thaw spinach (microwave 1 min), mix with drained sardines, walnuts, oil, vinegar, pepper. (3 min)",
+            "nutrition": "~400 kcal, 22 g protein, 4 g fiber, 380 mg sodium",
+            "cost": "$1.81",
+            "snack": {
+                "number": "099",
+                "title": "Cottage Cheese-Apple Dip",
+                "ingredients": [
+                    { "name": "1/4 cup cottage cheese", "cost": "$0.35" },
+                    { "name": "1/2 Granny Smith apple", "cost": "$0.33" },
+                    { "name": "1 tsp peanut butter", "cost": "$0.07" },
+                    { "name": "1/4 tsp cinnamon", "cost": "$0.02" }
+                ],
+                "prep": "Slice apple, mix cottage cheese, peanut butter, cinnamon. Dip and eat. (3 min)",
+                "nutrition": "~190 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
+                "cost": "$0.77"
+            }
+        },
+        "Dinner": {
+            "number": "009",
+            "title": "Turkey-Cauliflower Skillet",
+            "ingredients": [
+                { "name": "4 oz ground turkey", "cost": "$1.14" },
+                { "name": "1/2 cup frozen riced cauliflower", "cost": "$0.27" },
+                { "name": "1/2 cup frozen green beans", "cost": "$0.16" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp BBQ sauce", "cost": "$0.07" },
+                { "name": "1/4 tsp black pepper", "cost": "$0.02" }
+            ],
+            "prep": "Cook turkey in oil, add veggies, sauce, pepper; cook 5 min. (15 min)",
+            "nutrition": "~420 kcal, 24 g protein, 5 g fiber, 400 mg sodium",
+            "cost": "$1.80",
+            "snack": {
+                "number": "100",
+                "title": "Yogurt-Cherry Flax Mix",
+                "ingredients": [
+                    { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                    { "name": "1/4 cup frozen cherries", "cost": "$0.56" },
+                    { "name": "1 tsp ground flax seed", "cost": "$0.04" },
+                    { "name": "1 tsp maple syrup", "cost": "$0.21" }
+                ],
+                "prep": "Thaw cherries (microwave 30 sec), mix with yogurt, flax, syrup. (3 min)",
+                "nutrition": "~190 kcal, 7 g protein, 2 g fiber, 40 mg sodium",
+                "cost": "$1.09"
+            }
+        },
+        "Dessert": {
+            "number": "157",
+            "title": "Pumpkin-Walnut Yogurt Parfait",
+            "ingredients": [
+                { "name": "1/4 cup canned pumpkin", "cost": "$0.12" },
+                { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                { "name": "1 tbsp walnuts", "cost": "$0.33" },
+                { "name": "1 tsp honey", "cost": "$0.12" },
+                { "name": "1/4 tsp pumpkin pie spice", "cost": "$0.04" }
+            ],
+            "prep": "Layer all, mix lightly. (2 min)",
+            "nutrition": "~190 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
+            "cost": "$0.89"
+        }
+    },
+    "Thursday": {
+        "Breakfast": {
+            "number": "010",
+            "title": "Kefir-Oat Berry Bowl",
+            "ingredients": [
+                { "name": "1/2 cup quick oats", "cost": "$0.04" },
+                { "name": "1/2 cup kefir", "cost": "$0.29" },
+                { "name": "1/4 cup frozen raspberries", "cost": "$0.33" },
+                { "name": "1 tbsp chia seeds", "cost": "$0.22" },
+                { "name": "1 tsp maple syrup", "cost": "$0.21" },
+                { "name": "1/4 tsp cinnamon", "cost": "$0.02" }
+            ],
+            "prep": "Mix all, let sit 5 min or fridge overnight. (2 min)",
+            "nutrition": "~350 kcal, 12 g protein, 8 g fiber, 100 mg sodium",
+            "cost": "$1.11",
+            "snack": {
+                "number": "101",
+                "title": "Cottage Cheese-Blueberry Mix",
+                "ingredients": [
+                    { "name": "1/4 cup cottage cheese", "cost": "$0.35" },
+                    { "name": "1/4 cup frozen blueberries", "cost": "$0.40" },
+                    { "name": "1 tsp honey", "cost": "$0.12" },
+                    { "name": "1/4 tsp vanilla extract", "cost": "$0.35" }
+                ],
+                "prep": "Mix all, let sit 2 min. (2 min)",
+                "nutrition": "~190 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
+                "cost": "$1.22"
+            }
+        },
+        "Lunch": {
+            "number": "011",
+            "title": "Black Bean-Broccoli Quinoa Bowl",
+            "ingredients": [
+                { "name": "1/2 cup canned black beans", "cost": "$0.14" },
+                { "name": "1/2 cup cooked quinoa", "cost": "$0.19" },
+                { "name": "1/2 cup frozen broccoli", "cost": "$0.17" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 Dorot garlic cube", "cost": "$0.15" },
+                { "name": "1 tsp cumin", "cost": "$0.02" },
+                { "name": "1/4 cup kefir", "cost": "$0.15" }
+            ],
+            "prep": "Microwave beans, quinoa, broccoli, garlic 2 min. Stir in oil, cumin, kefir. (3 min)",
+            "nutrition": "~420 kcal, 16 g protein, 8 g fiber, 200 mg sodium",
+            "cost": "$0.96",
+            "snack": {
+                "number": "102",
+                "title": "Yogurt-Prune Flax Cup",
+                "ingredients": [
+                    { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                    { "name": "2 prunes", "cost": "$0.34" },
+                    { "name": "1 tsp ground flax seed", "cost": "$0.04" },
+                    { "name": "1 tsp maple syrup", "cost": "$0.21" }
+                ],
+                "prep": "Chop prunes, mix with yogurt, flax, syrup. Let sit 5 min. (3 min)",
+                "nutrition": "~200 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
+                "cost": "$0.87"
+            }
+        },
+        "Dinner": {
+            "number": "012",
+            "title": "Beef-Spinach Stir-Fry",
+            "ingredients": [
+                { "name": "4 oz ground beef", "cost": "$1.79" },
+                { "name": "1/2 cup frozen spinach", "cost": "$0.13" },
+                { "name": "1/2 cup frozen peppers and onions", "cost": "$0.34" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp W Sauce", "cost": "$0.17" },
+                { "name": "1/4 tsp chili powder", "cost": "$0.02" }
+            ],
+            "prep": "Cook beef in oil, add veggies, sauce, chili powder; cook 5 min. (15 min)",
+            "nutrition": "~450 kcal, 26 g protein, 4 g fiber, 500 mg sodium",
+            "cost": "$2.59",
+            "snack": {
+                "number": "103",
+                "title": "Cottage Cheese-Kiwi Mix",
+                "ingredients": [
+                    { "name": "1/4 cup cottage cheese", "cost": "$0.35" },
+                    { "name": "1 kiwi", "cost": "$0.57" },
+                    { "name": "1 tsp honey", "cost": "$0.12" },
+                    { "name": "1/4 tsp cinnamon", "cost": "$0.02" }
+                ],
+                "prep": "Dice kiwi, mix with cottage cheese, honey, cinnamon. (3 min)",
+                "nutrition": "~190 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
+                "cost": "$1.06"
+            }
+        },
+        "Dessert": {
+            "number": "158",
+            "title": "Prune-Yogurt Chia Cup",
+            "ingredients": [
+                { "name": "2 prunes", "cost": "$0.34" },
+                { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                { "name": "1 tbsp chia seeds", "cost": "$0.22" },
+                { "name": "1 tsp honey", "cost": "$0.12" },
+                { "name": "1/4 tsp vanilla extract", "cost": "$0.35" }
+            ],
+            "prep": "Chop prunes, mix with yogurt, chia, honey, vanilla. Let sit 5 min. (3 min)",
+            "nutrition": "~200 kcal, 7 g protein, 4 g fiber, 40 mg sodium",
+            "cost": "$1.31"
+        }
+    },
+    "Friday": {
+        "Breakfast": {
+            "number": "013",
+            "title": "Egg-Spinach Tomato Skillet",
+            "ingredients": [
+                { "name": "1 egg", "cost": "$0.17" },
+                { "name": "1/2 cup frozen spinach", "cost": "$0.13" },
+                { "name": "1/4 cup canned diced tomatoes", "cost": "$0.07" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1/4 tsp turmeric", "cost": "$0.02" }
+            ],
+            "prep": "Heat oil, cook spinach, tomatoes, turmeric; add egg, scramble. (5 min)",
+            "nutrition": "~220 kcal, 10 g protein, 3 g fiber, 200 mg sodium",
+            "cost": "$0.53",
+            "snack": {
+                "number": "104",
+                "title": "Yogurt-Raspberry Walnut Cup",
+                "ingredients": [
+                    { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                    { "name": "1/4 cup frozen raspberries", "cost": "$0.33" },
+                    { "name": "1 tbsp walnuts", "cost": "$0.33" },
+                    { "name": "1 tsp honey", "cost": "$0.12" }
+                ],
+                "prep": "Mix all, let sit 2 min. (2 min)",
+                "nutrition": "~220 kcal, 8 g protein, 3 g fiber, 40 mg sodium",
+                "cost": "$1.06"
+            }
+        },
+        "Lunch": {
+            "number": "014",
+            "title": "Chicken-Kale Quinoa Salad",
+            "ingredients": [
+                { "name": "5.22 oz canned chicken", "cost": "$0.93" },
+                { "name": "1/2 cup cooked quinoa", "cost": "$0.19" },
+                { "name": "1/2 cup frozen kale", "cost": "$0.16" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp balsamic vinegar", "cost": "$0.07" },
+                { "name": "1/4 tsp black pepper", "cost": "$0.02" }
+            ],
+            "prep": "Thaw kale (microwave 1 min), mix with chicken, quinoa, oil, vinegar, pepper. (3 min)",
+            "nutrition": "~430 kcal, 24 g protein, 5 g fiber, 400 mg sodium",
+            "cost": "$1.51",
+            "snack": {
+                "number": "105",
+                "title": "Cottage Cheese-Pumpkin Mix",
+                "ingredients": [
+                    { "name": "1/4 cup cottage cheese", "cost": "$0.35" },
+                    { "name": "1/4 cup canned pumpkin", "cost": "$0.12" },
+                    { "name": "1 tsp maple syrup", "cost": "$0.21" },
+                    { "name": "1/4 tsp pumpkin pie spice", "cost": "$0.04" }
+                ],
+                "prep": "Mix all ingredients. (2 min)",
+                "nutrition": "~180 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
+                "cost": "$0.72"
+            }
+        },
+        "Dinner": {
+            "number": "015",
+            "title": "Salmon-Brussels Sprouts Bowl",
+            "ingredients": [
+                { "name": "4 oz frozen salmon", "cost": "$1.68" },
+                { "name": "1/2 cup frozen Brussels sprouts", "cost": "$0.24" },
+                { "name": "1 tbsp walnuts", "cost": "$0.33" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp lemon juice", "cost": "$0.03" },
+                { "name": "1/4 tsp black pepper", "cost": "$0.02" }
+            ],
+            "prep": "Bake salmon (400°F, 15 min). Microwave sprouts 2 min. Toss with walnuts, oil, lemon, pepper. (20 min)",
+            "nutrition": "~460 kcal, 26 g protein, 5 g fiber, 350 mg sodium",
+            "cost": "$2.44",
+            "snack": {
+                "number": "106",
+                "title": "Yogurt-Chocolate Chia Cup",
+                "ingredients": [
+                    { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                    { "name": "1 square Lindt 85% chocolate", "cost": "$0.56" },
+                    { "name": "1 tbsp chia seeds", "cost": "$0.22" },
+                    { "name": "1 tsp honey", "cost": "$0.12" }
+                ],
+                "prep": "Chop chocolate, mix with yogurt, chia, honey. Let sit 5 min. (3 min)",
+                "nutrition": "~230 kcal, 8 g protein, 4 g fiber, 40 mg sodium",
+                "cost": "$1.18"
+            }
+        },
+        "Dessert": {
+            "number": "159",
+            "title": "Kiwi-Yogurt Flax Parfait",
+            "ingredients": [
+                { "name": "1 kiwi", "cost": "$0.57" },
+                { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                { "name": "1 tsp ground flax seed", "cost": "$0.04" },
+                { "name": "1 tsp maple syrup", "cost": "$0.21" },
+                { "name": "1/4 tsp cinnamon", "cost": "$0.02" }
+            ],
+            "prep": "Dice kiwi, layer with yogurt, flax, syrup, cinnamon. (3 min)",
+            "nutrition": "~180 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
+            "cost": "$1.12"
+        }
+    },
+    "Saturday": {
+        "Breakfast": {
+            "number": "016",
+            "title": "Oat-Egg Veggie Muffin",
+            "ingredients": [
+                { "name": "2 eggs", "cost": "$0.33" },
+                { "name": "1/4 cup quick oats", "cost": "$0.04" },
+                { "name": "1/4 cup frozen peas and carrots", "cost": "$0.08" },
+                { "name": "1 tbsp Greek yogurt", "cost": "$0.07" },
+                { "name": "1 tsp nutritional yeast", "cost": "$0.10" },
+                { "name": "1/4 tsp Montreal chicken seasoning", "cost": "$0.02" },
+                { "name": "1 tsp lemon juice", "cost": "$0.03" }
+            ],
+            "prep": "Mix all, microwave in mug 2–3 min. (5 min)",
+            "nutrition": "~340 kcal, 18 g protein, 4 g fiber, 300 mg sodium",
+            "cost": "$0.67",
+            "snack": {
+                "number": "107",
+                "title": "Cottage Cheese-Raspberry Mix",
+                "ingredients": [
+                    { "name": "1/4 cup cottage cheese", "cost": "$0.35" },
+                    { "name": "1/4 cup frozen raspberries", "cost": "$0.33" },
+                    { "name": "1 tsp maple syrup", "cost": "$0.21" },
+                    { "name": "1/4 tsp vanilla extract", "cost": "$0.35" }
+                ],
+                "prep": "Mix all, let sit 2 min. (2 min)",
+                "nutrition": "~190 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
+                "cost": "$1.24"
+            }
+        },
+        "Lunch": {
+            "number": "017",
+            "title": "Turkey-Black Bean Salad",
+            "ingredients": [
+                { "name": "4 oz ground turkey (pre-cooked)", "cost": "$1.14" },
+                { "name": "1/2 cup canned black beans", "cost": "$0.14" },
+                { "name": "1/2 cup frozen green peppers", "cost": "$0.15" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp spicy brown mustard", "cost": "$0.03" },
+                { "name": "1/4 tsp cumin", "cost": "$0.02" }
+            ],
+            "prep": "Thaw peppers (microwave 1 min), mix with turkey, beans, oil, mustard, cumin. (3 min)",
+            "nutrition": "~420 kcal, 25 g protein, 7 g fiber, 400 mg sodium",
+            "cost": "$1.62",
+            "snack": {
+                "number": "108",
+                "title": "Yogurt-Apple Flax Cup",
+                "ingredients": [
+                    { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                    { "name": "1/2 Granny Smith apple", "cost": "$0.33" },
+                    { "name": "1 tsp ground flax seed", "cost": "$0.04" },
+                    { "name": "1 tsp honey", "cost": "$0.12" }
+                ],
+                "prep": "Dice apple, mix with yogurt, flax, honey. Let sit 5 min. (3 min)",
+                "nutrition": "~190 kcal, 7 g protein, 3 g fiber, 40 mg sodium",
+                "cost": "$0.77"
+            }
+        },
+        "Dinner": {
+            "number": "018",
+            "title": "Chicken-Broccoli Stir-Fry",
+            "ingredients": [
+                { "name": "4 oz frozen chicken breast", "cost": "$1.07" },
+                { "name": "1/2 cup frozen broccoli", "cost": "$0.17" },
+                { "name": "1/2 cup frozen peppers and onions", "cost": "$0.34" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp teriyaki sauce", "cost": "$0.07" },
+                { "name": "1/4 tsp ginger", "cost": "$0.02" }
+            ],
+            "prep": "Cook chicken in oil, add veggies, sauce, ginger; cook 5 min. (15 min)",
+            "nutrition": "~430 kcal, 25 g protein, 4 g fiber, 600 mg sodium",
+            "cost": "$1.81",
+            "snack": {
+                "number": "109",
+                "title": "Cottage Cheese-Chocolate Mix",
+                "ingredients": [
+                    { "name": "1/4 cup cottage cheese", "cost": "$0.35" },
+                    { "name": "1 square Lindt 85% chocolate", "cost": "$0.56" },
+                    { "name": "1 tsp maple syrup", "cost": "$0.21" },
+                    { "name": "1/4 tsp vanilla extract", "cost": "$0.35" }
+                ],
+                "prep": "Chop chocolate, mix with cottage cheese, syrup, vanilla. (3 min)",
+                "nutrition": "~220 kcal, 8 g protein, 1 g fiber, 150 mg sodium",
+                "cost": "$1.47"
+            }
+        },
+        "Dessert": {
+            "number": "160",
+            "title": "Cherry-Chia Yogurt Cup",
+            "ingredients": [
+                { "name": "1/4 cup frozen cherries", "cost": "$0.56" },
+                { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                { "name": "1 tbsp chia seeds", "cost": "$0.22" },
+                { "name": "1 tsp honey", "cost": "$0.12" },
+                { "name": "1/4 tsp vanilla extract", "cost": "$0.35" }
+            ],
+            "prep": "Thaw cherries (microwave 30 sec), mix with yogurt, chia, honey, vanilla. (3 min)",
+            "nutrition": "~190 kcal, 7 g protein, 4 g fiber, 40 mg sodium",
+            "cost": "$1.53"
+        }
+    },
+    "Sunday": {
+        "Breakfast": {
+            "number": "019",
+            "title": "Egg-Quinoa Veggie Scramble",
+            "ingredients": [
+                { "name": "2 eggs", "cost": "$0.33" },
+                { "name": "1/2 cup cooked quinoa", "cost": "$0.19" },
+                { "name": "1/2 cup frozen zucchini blend", "cost": "$0.24" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp nutritional yeast", "cost": "$0.10" },
+                { "name": "1/4 tsp chili powder", "cost": "$0.02" },
+                { "name": "1 tsp lemon juice", "cost": "$0.03" }
+            ],
+            "prep": "Heat oil, cook zucchini, quinoa; scramble eggs with yeast, chili powder. Drizzle lemon. (5 min)",
+            "nutrition": "~360 kcal, 18 g protein, 3 g fiber, 250 mg sodium",
+            "cost": "$1.05",
+            "snack": {
+                "number": "110",
+                "title": "Yogurt-Blueberry Chia Cup",
+                "ingredients": [
+                    { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                    { "name": "1/4 cup frozen blueberries", "cost": "$0.40" },
+                    { "name": "1 tbsp chia seeds", "cost": "$0.22" },
+                    { "name": "1 tsp maple syrup", "cost": "$0.21" }
+                ],
+                "prep": "Mix all, let sit 5 min. (2 min)",
+                "nutrition": "~200 kcal, 7 g protein, 4 g fiber, 40 mg sodium",
+                "cost": "$1.11"
+            }
+        },
+        "Lunch": {
+            "number": "020",
+            "title": "Ground Turkey and Black Bean Power Bowl",
+            "ingredients": [
+                { "name": "4 oz ground turkey", "cost": "$1.14" },
+                { "name": "1 Wholly avocado mini", "cost": "$0.91" },
+                { "name": "1 tbsp canned pumpkin", "cost": "$0.02" },
+                { "name": "1/2 cup canned black beans", "cost": "$0.14" },
+                { "name": "1/2 cup cooked quinoa", "cost": "$0.19" },
+                { "name": "1/2 cup frozen spinach", "cost": "$0.13" },
+                { "name": "1 Dorot garlic cube", "cost": "$0.15" },
+                { "name": "1 tbsp olive oil", "cost": "$0.27" },
+                { "name": "1/2 tsp cumin", "cost": "$0.02" },
+                { "name": "1/4 tsp turmeric", "cost": "$0.02" },
+                { "name": "1/4 tsp chili powder", "cost": "$0.02" },
+                { "name": "1 tsp nutritional yeast", "cost": "$0.10" },
+                { "name": "1 tsp lemon juice", "cost": "$0.03" },
+                { "name": "2 tbsp Greek yogurt", "cost": "$0.14" }
+            ],
+            "prep": "Microwave turkey, beans, quinoa, spinach, garlic 2 min. Mix with oil, spices, yeast, lemon, yogurt, avocado, pumpkin. (4 min)",
+            "nutrition": "~540 kcal, 28 g protein, 9 g fiber, 450 mg sodium",
+            "cost": "$3.28",
+            "snack": {
+                "number": "111",
+                "title": "Cottage Cheese-Kiwi Flax Mix",
+                "ingredients": [
+                    { "name": "1/4 cup cottage cheese", "cost": "$0.35" },
+                    { "name": "1 kiwi", "cost": "$0.57" },
+                    { "name": "1 tsp ground flax seed", "cost": "$0.04" },
+                    { "name": "1 tsp honey", "cost": "$0.12" }
+                ],
+                "prep": "Dice kiwi, mix with cottage cheese, flax, honey. (3 min)",
+                "nutrition": "~190 kcal, 8 g protein, 2 g fiber, 150 mg sodium",
+                "cost": "$1.08"
+            }
+        },
+        "Dinner": {
+            "number": "021",
+            "title": "Beef-Broccoli Quinoa Bowl",
+            "ingredients": [
+                { "name": "4 oz ground beef", "cost": "$1.79" },
+                { "name": "1/2 cup frozen broccoli", "cost": "$0.17" },
+                { "name": "1/2 cup cooked quinoa", "cost": "$0.19" },
+                { "name": "1 tsp olive oil", "cost": "$0.14" },
+                { "name": "1 tsp W Sauce", "cost": "$0.17" },
+                { "name": "1/4 tsp black pepper", "cost": "$0.02" }
+            ],
+            "prep": "Cook beef in oil, add broccoli, quinoa, sauce, pepper; cook 5 min. (15 min)",
+            "nutrition": "~460 kcal, 26 g protein, 5 g fiber, 500 mg sodium",
+            "cost": "$2.28",
+            "snack": {
+                "number": "112",
+                "title": "Yogurt-Pumpkin Walnut Mix",
+                "ingredients": [
+                    { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                    { "name": "1/4 cup canned pumpkin", "cost": "$0.12" },
+                    { "name": "1 tbsp walnuts", "cost": "$0.33" },
+                    { "name": "1 tsp maple syrup", "cost": "$0.21" }
+                ],
+                "prep": "Mix all ingredients. (2 min)",
+                "nutrition": "~210 kcal, 8 g protein, 3 g fiber, 40 mg sodium",
+                "cost": "$0.94"
+            }
+        },
+        "Dessert": {
+            "number": "161",
+            "title": "Raspberry-Flax Yogurt Parfait",
+            "ingredients": [
+                { "name": "1/4 cup frozen raspberries", "cost": "$0.33" },
+                { "name": "1/4 cup Greek yogurt", "cost": "$0.28" },
+                { "name": "1 tsp ground flax seed", "cost": "$0.04" },
+                { "name": "1 tsp maple syrup", "cost": "$0.21" },
+                { "name": "1/4 tsp cinnamon", "cost": "$0.02" }
+            ],
+            "prep": "Thaw raspberries (microwave 30 sec), layer with yogurt, flax, syrup, cinnamon. (3 min)",
+            "nutrition": "~170 kcal, 7 g protein, 4 g fiber, 40 mg sodium",
+            "cost": "$0.88"
+        }
+    }
+}
