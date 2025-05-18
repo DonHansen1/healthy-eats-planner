@@ -252,12 +252,12 @@
                </tr>
            </thead>
            <tbody id="cost-table-body">
-               <tr><td class="border border-gray-300 p-2 font-bold">Breakfasts</td><td class="border border-gray-300 p-2 text-center">$1.03</td><td class="border border-gray-300 p-2 text-center">$7.21</td><td class="border border-gray-300 p-2 text-center">$31.33</td><td class="border border-gray-300 p-2 text-center">$375.95</td></tr>
-               <tr><td class="border border-gray-300 p-2 font-bold">Lunches</td><td class="border border-gray-300 p-2 text-center">$1.61</td><td class="border border-gray-300 p-2 text-center">$11.27</td><td class="border border-gray-300 p-2 text-center">$48.98</td><td class="border border-gray-300 p-2 text-center">$587.65</td></tr>
-               <tr><td class="border border-gray-300 p-2 font-bold">Dinners</td><td class="border border-gray-300 p-2 text-center">$2.12</td><td class="border border-gray-300 p-2 text-center">$14.84</td><td class="border border-gray-300 p-2 text-center">$64.49</td><td class="border border-gray-300 p-2 text-center">$773.80</td></tr>
-               <tr id="snacks-row"><td class="border border-gray-300 p-2 font-bold">Snacks</td><td class="border border-gray-300 p-2 text-center">$1.02</td><td class="border border-gray-300 p-2 text-center">$7.14</td><td class="border border-gray-300 p-2 text-center">$31.03</td><td class="border border-gray-300 p-2 text-center">$372.30</td></tr>
-               <tr id="desserts-row"><td class="border border-gray-300 p-2 font-bold">Desserts</td><td class="border border-gray-300 p-2 text-center">$1.16</td><td class="border border-gray-300 p-2 text-center">$8.12</td><td class="border border-gray-300 p-2 text-center">$35.29</td><td class="border border-gray-300 p-2 text-center">$423.40</td></tr>
-               <tr><td class="border border-gray-300 p-2 font-bold">Total</td><td class="border border-gray-300 p-2 text-center" id="total-day">$6.94</td><td class="border border-gray-300 p-2 text-center" id="total-week">$48.58</td><td class="border border-gray-300 p-2 text-center" id="total-month">$211.12</td><td class="border border-gray-300 p-2 text-center" id="total-year">$2533.10</td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Breakfasts</td><td class="border border-gray-300 p-2 text-center" id="breakfasts-day"></td><td class="border border-gray-300 p-2 text-center" id="breakfasts-week"></td><td class="border border-gray-300 p-2 text-center" id="breakfasts-month"></td><td class="border border-gray-300 p-2 text-center" id="breakfasts-year"></td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Lunches</td><td class="border border-gray-300 p-2 text-center" id="lunches-day"></td><td class="border border-gray-300 p-2 text-center" id="lunches-week"></td><td class="border border-gray-300 p-2 text-center" id="lunches-month"></td><td class="border border-gray-300 p-2 text-center" id="lunches-year"></td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Dinners</td><td class="border border-gray-300 p-2 text-center" id="dinners-day"></td><td class="border border-gray-300 p-2 text-center" id="dinners-week"></td><td class="border border-gray-300 p-2 text-center" id="dinners-month"></td><td class="border border-gray-300 p-2 text-center" id="dinners-year"></td></tr>
+               <tr id="snacks-row"><td class="border border-gray-300 p-2 font-bold">Snacks</td><td class="border border-gray-300 p-2 text-center" id="snacks-day"></td><td class="border border-gray-300 p-2 text-center" id="snacks-week"></td><td class="border border-gray-300 p-2 text-center" id="snacks-month"></td><td class="border border-gray-300 p-2 text-center" id="snacks-year"></td></tr>
+               <tr id="desserts-row"><td class="border border-gray-300 p-2 font-bold">Desserts</td><td class="border border-gray-300 p-2 text-center" id="desserts-day"></td><td class="border border-gray-300 p-2 text-center" id="desserts-week"></td><td class="border border-gray-300 p-2 text-center" id="desserts-month"></td><td class="border border-gray-300 p-2 text-center" id="desserts-year"></td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Total</td><td class="border border-gray-300 p-2 text-center" id="total-day"></td><td class="border border-gray-300 p-2 text-center" id="total-week"></td><td class="border border-gray-300 p-2 text-center" id="total-month"></td><td class="border border-gray-300 p-2 text-center" id="total-year"></td></tr>
            </tbody>
        </table>
        <h2 class="text-xl font-bold mt-6 mb-4 text-center">Average Nutrition</h2>
@@ -272,12 +272,12 @@
                </tr>
            </thead>
            <tbody>
-               <tr><td class="border border-gray-300 p-2 font-bold">Calories (kcal)</td><td class="border border-gray-300 p-2 text-center" id="calories-day">1620</td><td class="border border-gray-300 p-2 text-center" id="calories-week">11340</td><td class="border border-gray-300 p-2 text-center" id="calories-month">49280</td><td class="border border-gray-300 p-2 text-center" id="calories-year">590900</td></tr>
-               <tr><td class="border border-gray-300 p-2 font-bold">Protein (g)</td><td class="border border-gray-300 p-2 text-center" id="protein-day">83</td><td class="border border-gray-300 p-2 text-center" id="protein-week">581</td><td class="border border-gray-300 p-2 text-center" id="protein-month">2525</td><td class="border border-gray-300 p-2 text-center" id="protein-year">30295</td></tr>
-               <tr><td class="border border-gray-300 p-2 font-bold">Fiber (g)</td><td class="border border-gray-300 p-2 text-center" id="fiber-day">22</td><td class="border border-gray-300 p-2 text-center" id="fiber-week">154</td><td class="border border-gray-300 p-2 text-center" id="fiber-month">669</td><td class="border border-gray-300 p-2 text-center" id="fiber-year">8030</td></tr>
-               <tr><td class="border border-gray-300 p-2 font-bold">Sodium (mg)</td><td class="border border-gray-300 p-2 text-center" id="sodium-day">1400</td><td class="border border-gray-300 p-2 text-center" id="sodium-week">9800</td><td class="border border-gray-300 p-2 text-center" id="sodium-month">42588</td><td class="border border-gray-300 p-2 text-center" id="sodium-year">511000</td></tr>
-               <tr><td class="border border-gray-300 p-2 font-bold">Fat (g)</td><td class="border border-gray-300 p-2 text-center" id="fat-day">60</td><td class="border border-gray-300 p-2 text-center" id="fat-week">420</td><td class="border border-gray-300 p-2 text-center" id="fat-month">1825</td><td class="border border-gray-300 p-2 text-center" id="fat-year">21900</td></tr>
-               <tr><td class="border border-gray-300 p-2 font-bold">Carbohydrates (g)</td><td class="border border-gray-300 p-2 text-center" id="carbs-day">180</td><td class="border border-gray-300 p-2 text-center" id="carbs-week">1260</td><td class="border border-gray-300 p-2 text-center" id="carbs-month">5476</td><td class="border border-gray-300 p-2 text-center" id="carbs-year">65700</td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Calories (kcal)</td><td class="border border-gray-300 p-2 text-center" id="calories-day"></td><td class="border border-gray-300 p-2 text-center" id="calories-week"></td><td class="border border-gray-300 p-2 text-center" id="calories-month"></td><td class="border border-gray-300 p-2 text-center" id="calories-year"></td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Protein (g)</td><td class="border border-gray-300 p-2 text-center" id="protein-day"></td><td class="border border-gray-300 p-2 text-center" id="protein-week"></td><td class="border border-gray-300 p-2 text-center" id="protein-month"></td><td class="border border-gray-300 p-2 text-center" id="protein-year"></td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Fiber (g)</td><td class="border border-gray-300 p-2 text-center" id="fiber-day"></td><td class="border border-gray-300 p-2 text-center" id="fiber-week"></td><td class="border border-gray-300 p-2 text-center" id="fiber-month"></td><td class="border border-gray-300 p-2 text-center" id="fiber-year"></td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Sodium (mg)</td><td class="border border-gray-300 p-2 text-center" id="sodium-day"></td><td class="border border-gray-300 p-2 text-center" id="sodium-week"></td><td class="border border-gray-300 p-2 text-center" id="sodium-month"></td><td class="border border-gray-300 p-2 text-center" id="sodium-year"></td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Fat (g)</td><td class="border border-gray-300 p-2 text-center" id="fat-day"></td><td class="border border-gray-300 p-2 text-center" id="fat-week"></td><td class="border border-gray-300 p-2 text-center" id="fat-month"></td><td class="border border-gray-300 p-2 text-center" id="fat-year"></td></tr>
+               <tr><td class="border border-gray-300 p-2 font-bold">Carbohydrates (g)</td><td class="border border-gray-300 p-2 text-center" id="carbs-day"></td><td class="border border-gray-300 p-2 text-center" id="carbs-week"></td><td class="border border-gray-300 p-2 text-center" id="carbs-month"></td><td class="border border-gray-300 p-2 text-center" id="carbs-year"></td></tr>
            </tbody>
        </table>
    </div>
@@ -348,6 +348,87 @@
        let selectedMeal = null;
        let mealInfoVisible = false;
        let planInfoVisible = false;
+
+       function parseCost(costStr) {
+           return parseFloat(costStr.replace('$', '')) || 0;
+       }
+
+       function parseNutrition(nutritionStr) {
+           const regex = /~?(\d+)\s*kcal,\s*(\d+)\s*g\s*protein,\s*(\d+)\s*g\s*fiber,\s*(\d+)\s*mg\s*sodium/;
+           const match = nutritionStr.match(regex);
+           return match ? {
+               calories: parseInt(match[1]),
+               protein: parseInt(match[2]),
+               fiber: parseInt(match[3]),
+               sodium: parseInt(match[4]),
+               fat: 0,
+               carbs: 0
+           } : { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 };
+       }
+
+       function computeAverages() {
+           if (!menu) return { costs: {}, nutrition: {} };
+           const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+           const mealTypes = ['Breakfast', 'Lunch', 'Dinner', 'Dessert'];
+           const snackType = 'Snack';
+           const costs = { Breakfast: 0, Lunch: 0, Dinner: 0, Snack: 0, Dessert: 0 };
+           const nutrition = {
+               Breakfast: { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 },
+               Lunch: { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 },
+               Dinner: { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 },
+               Snack: { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 },
+               Dessert: { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 }
+           };
+           days.forEach(day => {
+               mealTypes.forEach(meal => {
+                   if (menu[day] && menu[day][meal]) {
+                       costs[meal] += parseCost(menu[day][meal].cost);
+                       const nut = parseNutrition(menu[day][meal].nutrition);
+                       nutrition[meal].calories += nut.calories;
+                       nutrition[meal].protein += nut.protein;
+                       nutrition[meal].fiber += nut.fiber;
+                       nutrition[meal].sodium += nut.sodium;
+                       nutrition[meal].fat += nut.fat;
+                       nutrition[meal].carbs += nut.carbs;
+                   }
+               });
+               if (menu[day]) {
+                   let snackCount = 0;
+                   ['Breakfast', 'Lunch', 'Dinner'].forEach(meal => {
+                       if (menu[day][meal] && menu[day][meal].snack) {
+                           costs.Snack += parseCost(menu[day][meal].snack.cost);
+                           const nut = parseNutrition(menu[day][meal].snack.nutrition);
+                           nutrition.Snack.calories += nut.calories;
+                           nutrition.Snack.protein += nut.protein;
+                           nutrition.Snack.fiber += nut.fiber;
+                           nutrition.Snack.sodium += nut.sodium;
+                           nutrition.Snack.fat += nut.fat;
+                           nutrition.Snack.carbs += nut.carbs;
+                           snackCount++;
+                       }
+                   });
+                   if (snackCount > 0) {
+                       costs.Snack /= snackCount;
+                       nutrition.Snack.calories /= snackCount;
+                       nutrition.Snack.protein /= snackCount;
+                       nutrition.Snack.fiber /= snackCount;
+                       nutrition.Snack.sodium /= snackCount;
+                       nutrition.Snack.fat /= snackCount;
+                       nutrition.Snack.carbs /= snackCount;
+                   }
+               }
+           });
+           mealTypes.forEach(meal => {
+               costs[meal] /= days.length;
+               nutrition[meal].calories /= days.length;
+               nutrition[meal].protein /= days.length;
+               nutrition[meal].fiber /= days.length;
+               nutrition[meal].sodium /= days.length;
+               nutrition[meal].fat /= days.length;
+               nutrition[meal].carbs /= days.length;
+           });
+           return { costs, nutrition };
+       }
 
        fetch('menu.json')
            .then(response => response.json())
@@ -457,10 +538,22 @@
            const includeDesserts = document.getElementById('include-desserts').checked;
            localStorage.setItem('includeSnacks', includeSnacks);
            localStorage.setItem('includeDesserts', includeDesserts);
-           const costs = { breakfast: 1.03, lunch: 1.61, dinner: 2.12, snack: 1.02, dessert: 1.16 };
-           let totalDay = costs.breakfast + costs.lunch + costs.dinner;
-           if (includeSnacks) totalDay += costs.snack;
-           if (includeDesserts) totalDay += costs.dessert;
+           const { costs } = computeAverages();
+           const mealTypes = ['Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert'];
+           let totalDay = 0;
+           mealTypes.forEach(meal => {
+               const avgCost = costs[meal] || 0;
+               totalDay += meal === 'Snack' && !includeSnacks ? 0 : meal === 'Dessert' && !includeDesserts ? 0 : avgCost;
+               const periods = [
+                   { id: 'day', factor: 1, value: avgCost },
+                   { id: 'week', factor: 7, value: avgCost * 7 },
+                   { id: 'month', factor: 30.42, value: avgCost * 30.42 },
+                   { id: 'year', factor: 365, value: avgCost * 365 }
+               ];
+               periods.forEach(period => {
+                   document.getElementById(`${meal.toLowerCase()}s-${period.id}`).textContent = `$${period.value.toFixed(2)}`;
+               });
+           });
            const periods = [
                { id: 'day', factor: 1, value: totalDay },
                { id: 'week', factor: 7, value: totalDay * 7 },
@@ -477,38 +570,20 @@
        function updateNutritionTable() {
            const includeSnacks = document.getElementById('include-snacks').checked;
            const includeDesserts = document.getElementById('include-desserts').checked;
-           const baseNutrition = {
-               calories: 1230, protein: 68, fiber: 16, sodium: 1250, fat: 45, carbs: 140
-           };
-           const snackNutrition = { calories: 200, protein: 8, fiber: 3, sodium: 100, fat: 8, carbs: 20 };
-           const dessertNutrition = { calories: 190, protein: 7, fiber: 3, sodium: 50, fat: 7, carbs: 20 };
-           let nutrition = { ...baseNutrition };
-           if (includeSnacks) {
-               nutrition.calories += snackNutrition.calories;
-               nutrition.protein += snackNutrition.protein;
-               nutrition.fiber += snackNutrition.fiber;
-               nutrition.sodium += snackNutrition.sodium;
-               nutrition.fat += snackNutrition.fat;
-               nutrition.carbs += snackNutrition.carbs;
-           }
-           if (includeDesserts) {
-               nutrition.calories += dessertNutrition.calories;
-               nutrition.protein += dessertNutrition.protein;
-               nutrition.fiber += dessertNutrition.fiber;
-               nutrition.sodium += dessertNutrition.sodium;
-               nutrition.fat += dessertNutrition.fat;
-               nutrition.carbs += dessertNutrition.carbs;
-           }
+           const { nutrition } = computeAverages();
+           const metrics = ['calories', 'protein', 'fiber', 'sodium', 'fat', 'carbs'];
            const periods = [
                { id: 'day', factor: 1 },
                { id: 'week', factor: 7 },
                { id: 'month', factor: 30.42 },
                { id: 'year', factor: 365 }
            ];
-           const metrics = ['calories', 'protein', 'fiber', 'sodium', 'fat', 'carbs'];
            metrics.forEach(metric => {
+               let total = nutrition.Breakfast[metric] + nutrition.Lunch[metric] + nutrition.Dinner[metric];
+               if (includeSnacks) total += nutrition.Snack[metric];
+               if (includeDesserts) total += nutrition.Dessert[metric];
                periods.forEach(period => {
-                   const value = Math.round(nutrition[metric] * period.factor);
+                   const value = Math.round(total * period.factor);
                    document.getElementById(`${metric}-${period.id}`).textContent = value;
                });
            });
