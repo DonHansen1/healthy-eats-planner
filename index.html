@@ -357,10 +357,10 @@
            const regex = /~?(\d+)\s*kcal,\s*(\d+)\s*g\s*protein,\s*(\d+)\s*g\s*fiber,\s*(\d+)\s*mg\s*sodium/;
            const match = nutritionStr.match(regex);
            return match ? {
-               calories: parseInt(match[1]),
-               protein: parseInt(match[2]),
-               fiber: parseInt(match[3]),
-               sodium: parseInt(match[4]),
+               calories: parseInt(match[1]) || 0,
+               protein: parseInt(match[2]) || 0,
+               fiber: parseInt(match[3]) || 0,
+               sodium: parseInt(match[4]) || 0,
                fat: 0,
                carbs: 0
            } : { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 };
@@ -370,68 +370,62 @@
            if (!menu) return { costs: {}, nutrition: {} };
            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
            const mealTypes = ['Breakfast', 'Lunch', 'Dinner', 'Dessert'];
-           const snackType = 'Snack';
-           const costs = { Breakfast: 0, Lunch: 0, Dinner: 0, Snack: 0, Dessert: 0 };
+           const costs = { Breakfast: [], Lunch: [], Dinner: [], Snack: [], Dessert: [] };
            const nutrition = {
-               Breakfast: { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 },
-               Lunch: { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 },
-               Dinner: { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 },
-               Snack: { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 },
-               Dessert: { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 }
+               Breakfast: [],
+               Lunch: [],
+               Dinner: [],
+               Snack: [],
+               Dessert: []
            };
+
            days.forEach(day => {
                mealTypes.forEach(meal => {
                    if (menu[day] && menu[day][meal]) {
-                       costs[meal] += parseCost(menu[day][meal].cost);
-                       const nut = parseNutrition(menu[day][meal].nutrition);
-                       nutrition[meal].calories += nut.calories;
-                       nutrition[meal].protein += nut.protein;
-                       nutrition[meal].fiber += nut.fiber;
-                       nutrition[meal].sodium += nut.sodium;
-                       nutrition[meal].fat += nut.fat;
-                       nutrition[meal].carbs += nut.carbs;
+                       costs[meal].push(parseCost(menu[day][meal].cost));
+                       nutrition[meal].push(parseNutrition(menu[day][meal].nutrition));
                    }
                });
                if (menu[day]) {
-                   let snackCount = 0;
                    ['Breakfast', 'Lunch', 'Dinner'].forEach(meal => {
                        if (menu[day][meal] && menu[day][meal].snack) {
-                           costs.Snack += parseCost(menu[day][meal].snack.cost);
-                           const nut = parseNutrition(menu[day][meal].snack.nutrition);
-                           nutrition.Snack.calories += nut.calories;
-                           nutrition.Snack.protein += nut.protein;
-                           nutrition.Snack.fiber += nut.fiber;
-                           nutrition.Snack.sodium += nut.sodium;
-                           nutrition.Snack.fat += nut.fat;
-                           nutrition.Snack.carbs += nut.carbs;
-                           snackCount++;
+                           costs.Snack.push(parseCost(menu[day][meal].snack.cost));
+                           nutrition.Snack.push(parseNutrition(menu[day][meal].snack.nutrition));
                        }
                    });
-                   if (snackCount > 0) {
-                       costs.Snack /= snackCount;
-                       nutrition.Snack.calories /= snackCount;
-                       nutrition.Snack.protein /= snackCount;
-                       nutrition.Snack.fiber /= snackCount;
-                       nutrition.Snack.sodium /= snackCount;
-                       nutrition.Snack.fat /= snackCount;
-                       nutrition.Snack.carbs /= snackCount;
-                   }
                }
            });
-           mealTypes.forEach(meal => {
-               costs[meal] /= days.length;
-               nutrition[meal].calories /= days.length;
-               nutrition[meal].protein /= days.length;
-               nutrition[meal].fiber /= days.length;
-               nutrition[meal].sodium /= days.length;
-               nutrition[meal].fat /= days.length;
-               nutrition[meal].carbs /= days.length;
+
+           const avgCosts = {};
+           const avgNutrition = {};
+           ['Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert'].forEach(meal => {
+               avgCosts[meal] = costs[meal].length ? costs[meal].reduce((a, b) => a + b, 0) / costs[meal].length : 0;
+               avgNutrition[meal] = nutrition[meal].length ? nutrition[meal].reduce((acc, curr) => ({
+                   calories: acc.calories + curr.calories,
+                   protein: acc.protein + curr.protein,
+                   fiber: acc.fiber + curr.fiber,
+                   sodium: acc.sodium + curr.sodium,
+                   fat: acc.fat + curr.fat,
+                   carbs: acc.carbs + curr.carbs
+               }), { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 }) : { calories: 0, protein: 0, fiber: 0, sodium: 0, fat: 0, carbs: 0 };
+               if (nutrition[meal].length) {
+                   avgNutrition[meal].calories /= nutrition[meal].length;
+                   avgNutrition[meal].protein /= nutrition[meal].length;
+                   avgNutrition[meal].fiber /= nutrition[meal].length;
+                   avgNutrition[meal].sodium /= nutrition[meal].length;
+                   avgNutrition[meal].fat /= nutrition[meal].length;
+                   avgNutrition[meal].carbs /= nutrition[meal].length;
+               }
            });
-           return { costs, nutrition };
+
+           return { costs: avgCosts, nutrition: avgNutrition };
        }
 
        fetch('menu.json')
-           .then(response => response.json())
+           .then(response => {
+               if (!response.ok) throw new Error('Failed to fetch menu.json');
+               return response.json();
+           })
            .then(data => {
                menu = data;
                updateRecipe();
@@ -551,7 +545,10 @@
                    { id: 'year', factor: 365, value: avgCost * 365 }
                ];
                periods.forEach(period => {
-                   document.getElementById(`${meal.toLowerCase()}s-${period.id}`).textContent = `$${period.value.toFixed(2)}`;
+                   const element = document.getElementById(`${meal.toLowerCase()}s-${period.id}`);
+                   if (element) {
+                       element.textContent = `$${period.value.toFixed(2)}`;
+                   }
                });
            });
            const periods = [
@@ -560,11 +557,16 @@
                { id: 'month', factor: 30.42, value: totalDay * 30.42 },
                { id: 'year', factor: 365, value: totalDay * 365 }
            ];
-           periods.forEach(period => document.getElementById(`total-${period.id}`).textContent = `$${period.value.toFixed(2)}`);
+           periods.forEach(period => {
+               const element = document.getElementById(`total-${period.id}`);
+               if (element) {
+                   element.textContent = `$${period.value.toFixed(2)}`;
+               }
+           });
            const snacksRow = document.getElementById('snacks-row');
            const dessertsRow = document.getElementById('desserts-row');
-           snacksRow.classList.toggle('grayed-out', !includeSnacks);
-           dessertsRow.classList.toggle('grayed-out', !includeDesserts);
+           if (snacksRow) snacksRow.classList.toggle('grayed-out', !includeSnacks);
+           if (dessertsRow) dessertsRow.classList.toggle('grayed-out', !includeDesserts);
        }
 
        function updateNutritionTable() {
@@ -579,12 +581,16 @@
                { id: 'year', factor: 365 }
            ];
            metrics.forEach(metric => {
-               let total = nutrition.Breakfast[metric] + nutrition.Lunch[metric] + nutrition.Dinner[metric];
-               if (includeSnacks) total += nutrition.Snack[metric];
-               if (includeDesserts) total += nutrition.Dessert[metric];
+               let total = (nutrition.Breakfast ? nutrition.Breakfast[metric] : 0) +
+                           (nutrition.Lunch ? nutrition.Lunch[metric] : 0) +
+                           (nutrition.Dinner ? nutrition.Dinner[metric] : 0);
+               if (includeSnacks && nutrition.Snack) total += nutrition.Snack[metric];
+               if (includeDesserts && nutrition.Dessert) total += nutrition.Dessert[metric];
                periods.forEach(period => {
-                   const value = Math.round(total * period.factor);
-                   document.getElementById(`${metric}-${period.id}`).textContent = value;
+                   const element = document.getElementById(`${metric}-${period.id}`);
+                   if (element) {
+                       element.textContent = Math.round(total * period.factor);
+                   }
                });
            });
        }
